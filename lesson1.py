@@ -11,10 +11,10 @@ print(str)
 print('***')
 
 print("Урок 1. Задание 1. Часть 2.")
-time = input("Введите время в секундах: ")
-time = int(time)
-print(time)
-print("Время:",time // 3600,":",time // 60 % 60,":",time % 60)
+t = input("Введите время в секундах: ")
+t = int(t)
+time_string = time.strftime('%H:%M:%S', time.gmtime(t))
+print(time_string)
 print('***')
 
 print("Урок 1. Задание 1. Часть 3.")
@@ -58,3 +58,4 @@ while a < b:
     a = a * 1.1
     i = i +1
 print('На ', i,'-й день спортсмен достиг результата - не менее ', b, ' км.')
+print('Задание выполнено!')
