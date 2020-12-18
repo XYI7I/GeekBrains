@@ -30,7 +30,7 @@ def personal_data():
     city = input('Введите город проживания: ')
     email = input('Введите e-mail: ')
     phone = input('Введите телефон: ')
-    print(name, lastname, year, city, email, phone)
+    print(name.title(), lastname.title(), year, city.title(), email, phone)
 
 personal_data()
 
@@ -65,8 +65,16 @@ def my_func(x, y):
         result = result / x
         i += 1
     print(result)
+arg1 = int(input('Введите целое положительное число x: '))
+while arg1 < 0:
+    print('Число должно быть положительным')
+    arg1 = int(input('Введите целое положительное число x: '))
+arg2 = int(input('Введите целое отрицательное число y: '))
+while arg2 > 0:
+    print('Число должно быть отрицательным')
+    arg2 = int(input('Введите целое отрицательное число y: '))
 
-my_func(int(input('Введите целое положительное число x: ')), int(input('Введите целое отрицательное число y: ')))
+my_func(arg1, arg2)
 
 print('***')
 
@@ -90,6 +98,7 @@ def my_sum ():
         print(f'Текущая сумма: {sum_res}')
     print(f'Итоговая сумма всех чисел: {sum_res}')
 
+
 my_sum()
 
 print('***')
@@ -110,5 +119,6 @@ a = input_str.split()
 for el in range(len(a)):
     s = func_title(s + a[el] + ' ')
 print(s)
+
 
 print('Задание выполнено!')
