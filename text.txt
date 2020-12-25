@@ -1,0 +1,4 @@
+with open("my_data.txt", 'x') as f_obj:
+    while str_data != '':
+        str_data = input('Please input data: ')
+        f_obj.writelines(str_data + '\n')
