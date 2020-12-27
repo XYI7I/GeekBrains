@@ -7,81 +7,81 @@
 # Задачу можно усложнить, реализовав проверку порядка режимов, и при его нарушении выводить соответствующее сообщение и завершать скрипт.
 print("Урок 6. Задание 1.")
 
-# from time import sleep
-#
-# class TrafficLight:
-#     __color = ['Красный', 'Желтый', 'Зеленый']
-#
-#     def run(self):
-#         i = 0
-#         print('Светофор работает')
-#         while i < 3:
-#             print(f'{TrafficLight.__color[i]}')
-#             if i == 0:
-#                 sleep(7)
-#             elif i == 1:
-#                 sleep(2)
-#             elif i == 2:
-#                 sleep(7)
-#             i += 1
-#
-# TrafficLight = TrafficLight()
-# TrafficLight.run()
+from time import sleep
 
-print('Доделать!***')
+class TrafficLight:
+    __color = ['Красный', 'Желтый', 'Зеленый']
+
+    def run(self):
+        i = 0
+        print('Светофор работает')
+        while i < 3:
+            print(f'{TrafficLight.__color[i]}')
+            if i == 0:
+                sleep(7)
+            elif i == 1:
+                sleep(2)
+            elif i == 2:
+                sleep(7)
+            i += 1
+
+TrafficLight = TrafficLight()
+TrafficLight.run()
+
+print('***')
 
 # Реализовать класс Road (дорога), в котором определить атрибуты: length (длина), width (ширина). Значения данных атрибутов должны передаваться при создании экземпляра класса. Атрибуты сделать защищенными. Определить метод расчета массы асфальта, необходимого для покрытия всего дорожного полотна. Использовать формулу: длина * ширина * масса асфальта для покрытия одного кв метра дороги асфальтом, толщиной в 1 см * число см толщины полотна. Проверить работу метода.
 # Например: 20м * 5000м * 25кг * 5см = 12500 т
 print("Урок 6. Задание 2.")
 
-# class Road:
-#     def __init__(self, _length, _width):
-#         self._length = _length
-#         self._width = _width
-#
-# class RoadLoad(Road):
-#     def __init__(self, _length, _width, _mass, _thickness):
-#         super().__init__(_length, _width)
-#         self.volume = _mass * _thickness
-#
-#     def load(self):
-#         return self._length * self._width * self.volume
-#
-#
-# r = RoadLoad(5000, 20, 25, 5)
-# print(f'Масса асфальта, необходимого для покрытия всего дорожного полотна: {int(r.load()/1000)} т')
+class Road:
+    def __init__(self, _length, _width):
+        self._length = _length
+        self._width = _width
+
+class RoadLoad(Road):
+    def __init__(self, _length, _width, _mass, _thickness):
+        super().__init__(_length, _width)
+        self.volume = _mass * _thickness
+
+    def load(self):
+        return self._length * self._width * self.volume
+
+
+r = RoadLoad(5000, 20, 25, 5)
+print(f'Масса асфальта, необходимого для покрытия всего дорожного полотна: {int(r.load()/1000)} т')
 
 print('***')
 
 # Реализовать базовый класс Worker (работник), в котором определить атрибуты: name, surname, position (должность), income (доход). Последний атрибут должен быть защищенным и ссылаться на словарь, содержащий элементы: оклад и премия, например, {"wage": wage, "bonus": bonus}. Создать класс Position (должность) на базе класса Worker. В классе Position реализовать методы получения полного имени сотрудника (get_full_name) и дохода с учетом премии (get_total_income). Проверить работу примера на реальных данных (создать экземпляры класса Position, передать данные, проверить значения атрибутов, вызвать методы экземпляров).
 print("Урок 6. Задание 3.")
 
-# class Worker:
-#
-#     def __init__(self, name, surname, position, wage, bonus):
-#         self.name = name
-#         self.lastname = lastname
-#         self.position = position
-#         self._income = {"wage": wage, "bonus": bonus}
-#
-#
-# class Position(Worker):
-#
-#     def __init__(self, name, lastname, position, wage, bonus):
-#         super().__init__(name, lastname, position, wage, bonus)
-#
-#     def get_full_name(self):
-#         return self.name + ' ' + self.lastname
-#
-#     def get_total_income(self):
-#         return self._income.get('wage') + self._income.get('bonus')
-#         # return f'{sum(self._income.values())}'
-#
-#
-# pers = Position('Elon', 'Reeve Musk', 'Industrial designer', 1000000, 250000)
-# print(pers.get_full_name())
-# print(pers.position)
-# print(f'Итоговая выплата $: {pers.get_total_income()}')
+class Worker:
+
+    def __init__(self, name, surname, position, wage, bonus):
+        self.name = name
+        self.lastname = lastname
+        self.position = position
+        self._income = {"wage": wage, "bonus": bonus}
+
+
+class Position(Worker):
+
+    def __init__(self, name, lastname, position, wage, bonus):
+        super().__init__(name, lastname, position, wage, bonus)
+
+    def get_full_name(self):
+        return self.name + ' ' + self.lastname
+
+    def get_total_income(self):
+        return self._income.get('wage') + self._income.get('bonus')
+        # return f'{sum(self._income.values())}'
+
+
+pers = Position('Elon', 'Reeve Musk', 'Industrial designer', 1000000, 250000)
+print(pers.get_full_name())
+print(pers.position)
+print(f'Итоговая выплата $: {pers.get_total_income()}')
 
 print('***')
 
