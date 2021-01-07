@@ -143,13 +143,13 @@ class Cell:
         row += f'{"*" * (self.quantity % cells_in_row)}'
         return row
 
-cells1 = Cell(10)
-cells2 = Cell(2)
+cells1 = Cell(13)
+cells2 = Cell(21)
 print(cells1)
 print(cells1 + cells2)
 print(cells2 - cells1)
 print(cells2.make_order(5))
-print(cells1.make_order(10))
+print(cells1.make_order(2))
 print(cells1 / cells2)
 
 print('Задание выполнено!')
