@@ -54,7 +54,6 @@ class Clothes:
         self.H_size = H_size
 
     def get_square_coat(self):
-        # print(f' {(self.V_size / 6.5 + 0.5):.2g}')
         return self.V_size / 6.5 + 0.5
 
     def get_square_suit(self):
