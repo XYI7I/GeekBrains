@@ -48,7 +48,7 @@ print('***')
 # Реализовать общий подсчет расхода ткани. Проверить на практике полученные на этом уроке знания: реализовать абстрактные классы для основных классов проекта, проверить на практике работу декоратора @property.
 print("Урок 7. Задание 2.")
 
-class Сlothes:
+class Clothes:
     def __init__(self, V_size, H_size):
         self.V_size = V_size
         self.H_size = H_size
@@ -65,25 +65,29 @@ class Сlothes:
                    f' {(self.V_size / 6.5 + 0.5) + (self.H_size * 2 + 0.3):.2g} м\u00b2')
 
 
-class Coat(Сlothes):
+class Coat(Clothes):
     def __init__(self, V_size, H_size):
-        super().__init__(V_size, H_size)
-        self.square_coat = self.V_size / 6.5 + 0.5
+        Clothes.__init__(self, V_size, H_size)
+
+    def get_square_coat(self):
+        Clothes.get_square_coat(self)
 
     def __str__(self):
-        return f'Расход ткани на производство пальто {self.square_coat:.2g} м\u00b2'
+        return f'Расход ткани на производство пальто {Clothes.get_square_coat(self):.2g} м\u00b2'
 
 
-class Suit(Сlothes):
+class Suit(Clothes):
     def __init__(self, V_size, H_size):
-        super().__init__(V_size, H_size)
-        self.square_suit = self.H_size * 2 + 0.3
+        Clothes.__init__(self, V_size, H_size)
+
+    def get_square_coat(self):
+        Clothes.get_square_suit(self)
 
     def __str__(self):
-        return f'Расход ткани на производство костюма {self.square_suit:.2g} м\u00b2'
+        return f'Расход ткани на производство костюма {Clothes.get_square_suit(self):.2g} м\u00b2'
 
-coat = Coat(2, 0)
-suit = Suit(0, 2)
+coat = Coat(7, 2)
+suit = Suit(6, 2)
 print(coat)
 print(suit)
 # print(get_sq_full)
