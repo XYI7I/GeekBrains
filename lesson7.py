@@ -54,10 +54,10 @@ class Clothes:
         self.H_size = H_size
 
     def get_square_coat(self):
-        return self.V_size / 6.5 + 0.5
+        return format(self.V_size / 6.5 + 0.5, '.2f')
 
     def get_square_suit(self):
-        return self.H_size * 2 + 0.3
+        return format(self.H_size * 2 + 0.3, '.2f')
 
     @property
     def get_sq_full(self):
@@ -73,7 +73,7 @@ class Coat(Clothes):
         Clothes.get_square_coat(self)
 
     def __str__(self):
-        return f'Расход ткани на производство пальто: {Clothes.get_square_coat(self):.2g} м\u00b2'
+        return f'Расход ткани на производство пальто: {Clothes.get_square_coat(self)} м\u00b2'
 
 
 class Suit(Clothes):
@@ -84,7 +84,7 @@ class Suit(Clothes):
         Clothes.get_square_suit(self)
 
     def __str__(self):
-        return f'Расход ткани на производство костюма: {Clothes.get_square_suit(self):.2g} м\u00b2'
+        return f'Расход ткани на производство костюма: {Clothes.get_square_suit(self)} м\u00b2'
 
 coat = Coat(7, 2)
 suit = Suit(6, 2)
