@@ -237,8 +237,12 @@ if part7.title() == 'Y':
             za = self.a + other.a
             zb = self.b + other.b
             print(f'Сумма z1 и z2 равна:')
-            if zb >= 0:
+            if zb > 0 and za > 0:
                 return f'= {za} + {zb}i'
+            elif za == 0:
+                return f'= {zb}i'
+            elif zb == 0:
+                return f'= {za}'
             else:
                 return f'= {za} - {-1 * zb}i'
 
@@ -246,14 +250,22 @@ if part7.title() == 'Y':
             za = self.a * other.a - (self.b * other.b)
             zb =  self.a*other.b + self.b * other.a
             print(f'Произведение z1 и z2 равно:')
-            if zb >= 0:
+            if zb > 0 and za > 0:
                 return f'= {za} + {zb}i'
+            elif za == 0:
+                return f'= {zb}i'
+            elif zb == 0:
+                return f'= {za}'
             else:
                 return f'= {za} - {-1 * zb}i'
 
         def __str__(self):
-            if self.b >= 0:
+            if self.b > 0 and self.a > 0:
                 return f'= {self.a} + {self.b}i'
+            elif self.a == 0:
+                return f'= {self.b}'
+            elif self.b == 0:
+                return f'= {self.a}'
             else:
                 return f'= {self.a} - {-1 * self.b}i'
 
