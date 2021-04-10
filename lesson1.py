@@ -13,13 +13,14 @@ import numpy as np
 Затем найдите среднее значение по каждому признаку, используя метод mean массива Numpy. 
 Результат запишите в массив mean_a, в нем должно быть 2 элемента.
 '''
+a = np.array([[1, 6], [2, 8], [3, 11], [3, 10], [1, 7]])
+a_centered = a - np.mean(a)
+a_centered_sp = a[:, 0] @ a[:, 1]
 
 print("Урок 1. Задание 1.")
 
 part1 = input('Выполнить задание 1? (Y) ')
 if part1.title() == 'Y':
-    a = np.array([[1, 6], [2, 8], [3, 11], [3, 10], [1, 7]])
-
     answer = ''
     while answer.title() != 'Y':
         print(a)
@@ -41,10 +42,10 @@ print("Урок 1. Задание 2.")
 
 part1 = input('Выполнить задание 2? (Y) ')
 if part1.title() == 'Y':
-
-
     answer = ''
     while answer.title() != 'Y':
+        # print(np.mean(a))
+        print(a_centered)
 
         answer = input('Закончить выполнение задания 2? (Y) ')
 else:
@@ -61,9 +62,10 @@ print("Урок 1. Задание 3.")
 part1 = input('Выполнить задание 3? (Y) ')
 if part1.title() == 'Y':
 
-
     answer = ''
     while answer.title() != 'Y':
+        print(a[0:, 0])
+        print(a_centered_sp)
 
         answer = input('Закончить выполнение задания 3? (Y) ')
 else:
@@ -92,3 +94,4 @@ if part1.title() == 'Y':
 else:
     pass
 print('***')
+
