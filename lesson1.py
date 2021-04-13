@@ -1,4 +1,4 @@
-# coding: utf-8
+# coding: utf-8 
 
 # Библиотеки Python для Data Science: Numpy, Matplotlib, Scikit-learn.
 # Занятие 1. Вычисления с помощью Numpy
