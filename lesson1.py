@@ -13,9 +13,9 @@ import numpy as np
 Затем найдите среднее значение по каждому признаку, используя метод mean массива Numpy. 
 Результат запишите в массив mean_a, в нем должно быть 2 элемента.
 '''
-a = np.array([[1, 6], [2, 8], [3, 11], [3, 10], [1, 7]])
-a_centered = a - np.mean(a)
-a_centered_sp = a[:, 0] @ a[:, 1]
+a = np.array([[1, 2, 3, 3, 1], [6, 8, 11, 10, 7]]).transpose()
+a_centered = a - np.mean(a, axis=0)
+a_centered_sp = a_centered.T[0] @ a_centered.T[1]
 
 print("Урок 1. Задание 1.")
 
@@ -27,7 +27,6 @@ if part1.title() == 'Y':
         print("Размерность a {}".format(a.ndim))
         print("Форма a {}".format(a.shape))
         print(np.mean(a, axis=0))
-
         answer = input('Закончить выполнение задания 1? (Y) ')
 else:
     pass
@@ -44,9 +43,7 @@ part1 = input('Выполнить задание 2? (Y) ')
 if part1.title() == 'Y':
     answer = ''
     while answer.title() != 'Y':
-        # print(np.mean(a))
         print(a_centered)
-
         answer = input('Закончить выполнение задания 2? (Y) ')
 else:
     pass
@@ -64,9 +61,9 @@ if part1.title() == 'Y':
 
     answer = ''
     while answer.title() != 'Y':
-        print(a[0:, 0])
+        # print(a[0:, 0])
         print(a_centered_sp)
-
+        print(a_centered_sp / (a_centered.shape[0] - 1))
         answer = input('Закончить выполнение задания 3? (Y) ')
 else:
     pass
@@ -86,12 +83,10 @@ print("Урок 1. Задание 4.")
 part1 = input('Выполнить задание 4? (Y) ')
 if part1.title() == 'Y':
 
-
     answer = ''
     while answer.title() != 'Y':
-
+        print(np.cov(a.T)[0, 1])
         answer = input('Закончить выполнение задания 4? (Y) ')
 else:
     pass
-print('***')
-
+print('Задание урока 1 выполнены!')
