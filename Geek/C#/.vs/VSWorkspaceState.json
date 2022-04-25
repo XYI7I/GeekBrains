@@ -2,8 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\lesson1",
-    "\\lesson1\\HW"
+    "\\lesson1\\HW",
+    "\\lesson1\\HW\\task4",
+    "\\lesson1\\HW\\task5",
+    "\\lesson1\\task4"
   ],
-  "SelectedNode": "\\lesson1\\HW\\README.MD",
+  "SelectedNode": "\\lesson1\\HW\\task5\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
