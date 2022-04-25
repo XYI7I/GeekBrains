@@ -1,0 +1,15 @@
+/home/greg/GB/C#/lesson1/task4/obj/Debug/net6.0/task4.csproj.AssemblyReference.cache
+/home/greg/GB/C#/lesson1/task4/obj/Debug/net6.0/task4.GeneratedMSBuildEditorConfig.editorconfig
+/home/greg/GB/C#/lesson1/task4/obj/Debug/net6.0/task4.AssemblyInfoInputs.cache
+/home/greg/GB/C#/lesson1/task4/obj/Debug/net6.0/task4.AssemblyInfo.cs
+/home/greg/GB/C#/lesson1/task4/obj/Debug/net6.0/task4.csproj.CoreCompileInputs.cache
+/home/greg/GB/C#/lesson1/task4/bin/Debug/net6.0/task4
+/home/greg/GB/C#/lesson1/task4/bin/Debug/net6.0/task4.deps.json
+/home/greg/GB/C#/lesson1/task4/bin/Debug/net6.0/task4.runtimeconfig.json
+/home/greg/GB/C#/lesson1/task4/bin/Debug/net6.0/task4.dll
+/home/greg/GB/C#/lesson1/task4/bin/Debug/net6.0/task4.pdb
+/home/greg/GB/C#/lesson1/task4/obj/Debug/net6.0/task4.dll
+/home/greg/GB/C#/lesson1/task4/obj/Debug/net6.0/refint/task4.dll
+/home/greg/GB/C#/lesson1/task4/obj/Debug/net6.0/task4.pdb
+/home/greg/GB/C#/lesson1/task4/obj/Debug/net6.0/task4.genruntimeconfig.cache
+/home/greg/GB/C#/lesson1/task4/obj/Debug/net6.0/ref/task4.dll

@@ -1,0 +1,15 @@
+/home/greg/GB/C#/lesson1/bin/Debug/net6.0/lesson1
+/home/greg/GB/C#/lesson1/bin/Debug/net6.0/lesson1.deps.json
+/home/greg/GB/C#/lesson1/bin/Debug/net6.0/lesson1.runtimeconfig.json
+/home/greg/GB/C#/lesson1/bin/Debug/net6.0/lesson1.dll
+/home/greg/GB/C#/lesson1/bin/Debug/net6.0/lesson1.pdb
+/home/greg/GB/C#/lesson1/obj/Debug/net6.0/lesson1.csproj.AssemblyReference.cache
+/home/greg/GB/C#/lesson1/obj/Debug/net6.0/lesson1.GeneratedMSBuildEditorConfig.editorconfig
+/home/greg/GB/C#/lesson1/obj/Debug/net6.0/lesson1.AssemblyInfoInputs.cache
+/home/greg/GB/C#/lesson1/obj/Debug/net6.0/lesson1.AssemblyInfo.cs
+/home/greg/GB/C#/lesson1/obj/Debug/net6.0/lesson1.csproj.CoreCompileInputs.cache
+/home/greg/GB/C#/lesson1/obj/Debug/net6.0/lesson1.dll
+/home/greg/GB/C#/lesson1/obj/Debug/net6.0/refint/lesson1.dll
+/home/greg/GB/C#/lesson1/obj/Debug/net6.0/lesson1.pdb
+/home/greg/GB/C#/lesson1/obj/Debug/net6.0/lesson1.genruntimeconfig.cache
+/home/greg/GB/C#/lesson1/obj/Debug/net6.0/ref/lesson1.dll

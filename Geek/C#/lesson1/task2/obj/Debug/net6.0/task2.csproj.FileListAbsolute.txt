@@ -1,0 +1,15 @@
+/home/greg/GB/C#/lesson1/task2/bin/Debug/net6.0/task2
+/home/greg/GB/C#/lesson1/task2/bin/Debug/net6.0/task2.deps.json
+/home/greg/GB/C#/lesson1/task2/bin/Debug/net6.0/task2.runtimeconfig.json
+/home/greg/GB/C#/lesson1/task2/bin/Debug/net6.0/task2.dll
+/home/greg/GB/C#/lesson1/task2/bin/Debug/net6.0/task2.pdb
+/home/greg/GB/C#/lesson1/task2/obj/Debug/net6.0/task2.csproj.AssemblyReference.cache
+/home/greg/GB/C#/lesson1/task2/obj/Debug/net6.0/task2.GeneratedMSBuildEditorConfig.editorconfig
+/home/greg/GB/C#/lesson1/task2/obj/Debug/net6.0/task2.AssemblyInfoInputs.cache
+/home/greg/GB/C#/lesson1/task2/obj/Debug/net6.0/task2.AssemblyInfo.cs
+/home/greg/GB/C#/lesson1/task2/obj/Debug/net6.0/task2.csproj.CoreCompileInputs.cache
+/home/greg/GB/C#/lesson1/task2/obj/Debug/net6.0/task2.dll
+/home/greg/GB/C#/lesson1/task2/obj/Debug/net6.0/refint/task2.dll
+/home/greg/GB/C#/lesson1/task2/obj/Debug/net6.0/task2.pdb
+/home/greg/GB/C#/lesson1/task2/obj/Debug/net6.0/task2.genruntimeconfig.cache
+/home/greg/GB/C#/lesson1/task2/obj/Debug/net6.0/ref/task2.dll
