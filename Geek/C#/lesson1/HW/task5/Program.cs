@@ -8,8 +8,10 @@ while (num > 999 ^ num < 100)
     Console.Write("Введите трехзначное число: ");
     
     num  = int.Parse(Console.ReadLine ());
-    string text = num.ToString(); 
-    text = text.Substring(2);
     
-    Console.WriteLine("Последняя цифра трехзначного числа: " + num + " --> " + text);
-}
+ }
+
+string text = num.ToString(); 
+text = text.Substring(2);
+
+Console.WriteLine("Последняя цифра трехзначного числа: " + num + " --> " + text);
