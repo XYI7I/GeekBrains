@@ -1,0 +1,52 @@
+[
+  {
+    "имя вакансии": "Data engineer / Инженер по данным",
+    "ссылка на вакансию": "https://www.superjob.ru//vakansii/data-engineer-41788517.html",
+    "источник": "https://www.superjob.ru/",
+    "зарплата": "По договоренности",
+    "валюта": null
+  },
+  {
+    "имя вакансии": "Системный аналитик",
+    "ссылка на вакансию": "https://www.superjob.ru//vakansii/sistemnyj-analitik-41755901.html",
+    "источник": "https://www.superjob.ru/",
+    "мин зарплата": 180000.0,
+    "макс зарплата": 200000.0,
+    "валюта": "руб./месяц"
+  },
+  {
+    "имя вакансии": "QA-engineer / Web-developer",
+    "ссылка на вакансию": "https://www.superjob.ru//vakansii/qa-engineer-40866748.html",
+    "источник": "https://www.superjob.ru/",
+    "мин зарплата": 100000.0,
+    "валюта": "руб./месяц"
+  },
+  {
+    "имя вакансии": "Middle Python-разработчика",
+    "ссылка на вакансию": "https://www.superjob.ru//vakansii/middle-python-razrabotchika-41737450.html",
+    "источник": "https://www.superjob.ru/",
+    "зарплата": "По договоренности",
+    "валюта": null
+  },
+  {
+    "имя вакансии": "Senior Frontend Developer",
+    "ссылка на вакансию": "https://www.superjob.ru//vakansii/senior-frontend-developer-40719617.html",
+    "источник": "https://www.superjob.ru/",
+    "зарплата": "По договоренности",
+    "валюта": null
+  },
+  {
+    "имя вакансии": "Разработчик Java",
+    "ссылка на вакансию": "https://www.superjob.ru//vakansii/razrabotchik-java-41906557.html",
+    "источник": "https://www.superjob.ru/",
+    "мин зарплата": 50000.0,
+    "валюта": "руб./месяц"
+  },
+  {
+    "имя вакансии": "Junior ML-разработчик",
+    "ссылка на вакансию": "https://www.superjob.ru//vakansii/junior-ml-razrabotchik-41737437.html",
+    "источник": "https://www.superjob.ru/",
+    "зарплата": "По договоренности",
+    "валюта": null
+  }
+]
