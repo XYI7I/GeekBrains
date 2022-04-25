@@ -10,14 +10,15 @@ Console.Write("второе число: ");
 int numb = int.Parse(Console.ReadLine ());
 bool square = numa * numa == numb;
 
-Console.WriteLine(square ? "Yes", "No");
+// Console.WriteLine(square ? "Yes", "No");
 
-// if (numb == numa * numa)
-// {
-//     Console.WriteLine("первое число квадрат второго");
-// }
+if (numb == numa * numa)
+{
+    Console.WriteLine("первое число квадрат второго");
+}
 
-// else
-// {
-//     Console.WriteLine("первое число не квадрат второго");
-// }
+else
+{
+    Console.WriteLine("первое число не квадрат второго");
+}
+    
