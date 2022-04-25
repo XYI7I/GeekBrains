@@ -11,5 +11,5 @@ while (num > 999 ^ num < 100)
     string text = num.ToString(); 
     text = text.Substring(2);
     
-    Console.WriteLine(text);
+    Console.WriteLine("Последняя цифра трехзначного числа: " + num + " --> " + text);
 }
