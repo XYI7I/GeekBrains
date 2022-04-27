@@ -17,7 +17,7 @@ else if (numa == numb)
     Console.WriteLine("Числа равны!");
 }
 
-else (numa < numb)
+else
 {
     Console.WriteLine("Первое число: " + numa + " меньше второго числа: " + numb);
 }
