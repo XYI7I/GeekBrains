@@ -12,12 +12,12 @@ if (numa > numb)
     Console.WriteLine("Первое число: " + numa + " больше второгочисла: " + numb);
 }
 
-if (numa == numb)
+else if (numa == numb)
 {
     Console.WriteLine("Числа равны!");
 }
 
-if (numa < numb)
+else (numa < numb)
 {
     Console.WriteLine("Первое число: " + numa + " меньше второго числа: " + numb);
 }
