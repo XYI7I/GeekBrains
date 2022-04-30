@@ -3,11 +3,11 @@ Console.WriteLine("Задача 4. Программу на вход приним
 
 Console.Write("Введите N: ");
 
-int N = int.Parse(Console.ReadLine ());
+int n = int.Parse(Console.ReadLine ());
 
 int i = 1;
 
- while (i <= N)
+ while (i <= n)
  {
     if (i % 2 == 0)
     {
