@@ -77,19 +77,16 @@ print("Урок 2. Задание 4.")
 
 input_str = input("Введите строку из нескольких слов, разделённых пробелами: ")
 
-my_word = []
 num = 1
-
 lessSpace = input_str.split()
-input_str = ' '.join(lessSpace)
 
-for el in range(input_str.count(' ') + 1):
-    my_word = input_str.split()
-    if len(str(my_word)) <= 10:
-        print(f" {num} {my_word[el]}")
+for el in lessSpace:
+
+    if len(el) <= 10:
+        print(f" {num} {el}")
         num += 1
     else:
-        print(f" {num} {my_word[el][0:10]}")
+        print(f" {num} {el[0:10]}")
         num += 1
 
 print('***')
