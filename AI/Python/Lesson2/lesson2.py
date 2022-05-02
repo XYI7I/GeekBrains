@@ -3,43 +3,59 @@
 # Основы языка Python.
 # Занятие 1. Знакомство с Python
 
-import time
+# Создать список и заполнить его элементами различных типов данных. Реализовать скрипт проверки типа данных каждого
+# элемента. Использовать функцию type() для проверки типа. Элементы списка можно не запрашивать у пользователя,
+# а указать явно, в программе.
 
-# Создать список и заполнить его элементами различных типов данных. Реализовать скрипт проверки типа данных каждого элемента. Использовать функцию type() для проверки типа. Элементы списка можно не запрашивать у пользователя, а указать явно, в программе.
 print("Урок 2. Задание 1.")
-my_list = [13, 'Hi', 269, 1.3, None,'Excellent']
-def my_type(el):
-    for el in range(len(my_list)):
-        print(type(my_list[el]))
+
+my_list = [13, 'Hi', 269, 1.3, None, 'Excellent']
+
+
+def my_type(elements):
+    for elements in range(len(my_list)):
+        print(type(my_list[elements]))
     return
+
+
 my_type(my_list)
 print(my_list)
+
 print('***')
 
-# Для списка реализовать обмен значений соседних элементов, т.е. Значениями обмениваются элементы с индексами 0 и 1, 2 и 3 и т.д. При нечетном количестве элементов последний сохранить на своем месте. Для заполнения списка элементов необходимо использовать функцию input().
+# Для списка реализовать обмен значений соседних элементов, т.е. Значениями обмениваются элементы с индексами 0 и 1,
+# 2 и 3 и т.д. При нечетном количестве элементов последний сохранить на своем месте. Для заполнения списка элементов
+# необходимо использовать функцию input().
+
 print("Урок 2. Задание 2.")
+
 el_count = int(input("Введите количество элементов списка "))
 my_list = []
 i = 0
 el = 0
+
 while i < el_count:
     my_list.append(input("Введите следующее значение списка "))
     i += 1
-for elem in range(int(len(my_list)/2)):
-        my_list[el], my_list[el + 1] = my_list [el + 1], my_list[el]
-        el += 2
+for elem in range(int(len(my_list) / 2)):
+    my_list[el], my_list[el + 1] = my_list[el + 1], my_list[el]
+    el += 2
+
 print(my_list)
 print('***')
 
-# Пользователь вводит месяц в виде целого числа от 1 до 12. Сообщить к какому времени года относится месяц (зима, весна, лето, осень). Напишите решения через list и через dict.
+# Пользователь вводит месяц в виде целого числа от 1 до 12. Сообщить к какому времени года относится месяц (зима,
+# весна, лето, осень). Напишите решения через list и через dict.
+
 print("Урок 2. Задание 3.")
 n = int(input("Введите число от 1 до 12: "))
 seas_list = ['Зима', 'Весна', 'Лето', 'Осень']
-seas_dict = {1 : 'Зима', 2 : 'Весна', 3 : 'Лето', 4 : 'Осень'}
-if n ==1 or n == 12 or n == 2:
-        print(seas_dict.get(1))
-        print(seas_list[0])
-elif n == 3 or n == 4 or n ==5:
+seas_dict = {1: 'Зима', 2: 'Весна', 3: 'Лето', 4: 'Осень'}
+
+if n == 1 or n == 12 or n == 2:
+    print(seas_dict.get(1))
+    print(seas_list[0])
+elif n == 3 or n == 4 or n == 5:
     print(seas_dict.get(2))
     print(seas_list[1])
 elif n == 6 or n == 7 or n == 8:
@@ -51,37 +67,45 @@ elif n == 9 or n == 10 or n == 11:
     print(seas_list[3])
 else:
     print("Такого месяца не существует")
+
 print('***')
 
 # Пользователь вводит строку из нескольких слов, разделённых пробелами. Вывести каждое слово с новой строки. Строки необходимо пронумеровать. Если в слово длинное, выводить только первые 10 букв в слове.
+
 print("Урок 2. Задание 4.")
+
 input_str = input("Введите строку из нескольких слов, разделённых пробелами: ")
 my_word = []
 num = 1
+
 for el in range(input_str.count(' ') + 1):
     my_word = input_str.split()
     if len(str(my_word)) <= 10:
-        print(f" {num} {my_word [el]}")
+        print(f" {num} {my_word[el]}")
         num += 1
     else:
-        print(f" {num} {my_word [el] [0:10]}")
+        print(f" {num} {my_word[el][0:10]}")
         num += 1
+
 print('***')
 
 # Реализовать структуру «Рейтинг», представляющую собой не возрастающий набор натуральных чисел. У пользователя необходимо запрашивать новый элемент рейтинга. Если в рейтинге существуют элементы с одинаковыми значениями, то новый элемент с тем же значением должен разместиться после них.
+
 print("Урок 2. Задание 5.")
 my_list = [7, 5, 3, 3, 2]
 digit = int(input("Введите число от 0 до 9: "))
-for el in range(len(my_list)):
-    if my_list[el] == digit:
-        my_list.insert(el + 1, digit)
+
+for elements in range(len(my_list)):
+    if my_list[elements] == digit:
+        my_list.insert(elements + 1, digit)
         break
-    elif my_list[0] < digit:\
+    elif my_list[0] < digit: \
             my_list.insert(0, digit)
-    elif my_list[-1] > digit:\
+    elif my_list[-1] > digit: \
             my_list.append(digit)
-    elif my_list[el] > digit and my_list[el + 1] < digit:\
-            my_list.insert(el + 1, digit)
+    elif my_list[elements] > digit and my_list[elements + 1] < digit: \
+            my_list.insert(elements + 1, digit)
+
 print(f"текущий список - {my_list}")
 print('***')
 
