@@ -120,5 +120,4 @@ for el in range(len(a)):
     s = func_title(s + a[el] + ' ')
 print(s)
 
-
 print('Задание выполнено!')
