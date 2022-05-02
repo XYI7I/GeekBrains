@@ -80,14 +80,10 @@ input_str = input("Введите строку из нескольких сло�
 num = 1
 lessSpace = input_str.split()
 
-for el in lessSpace:
-
-    if len(el) <= 10:
-        print(f" {num} {el}")
-        num += 1
-    else:
-        print(f" {num} {el[0:10]}")
-        num += 1
+for index, el in enumerate(lessSpace):
+    # print(f" {num} {el[0:10]}")
+    print(f" {index + 1} {el[0:10]}")
+    num += 1
 
 print('***')
 
@@ -99,16 +95,8 @@ print("Урок 2. Задание 5.")
 my_list = [7, 5, 3, 3, 2]
 digit = int(input("Введите число от 0 до 9: "))
 
-for elements in range(len(my_list)):
-    if my_list[elements] == digit:
-        my_list.insert(elements + 1, digit)
-        break
-    elif my_list[0] < digit: \
-            my_list.insert(0, digit)
-    elif my_list[-1] > digit: \
-            my_list.append(digit)
-    elif my_list[elements] > digit > my_list[elements + 1]: \
-            my_list.insert(elements + 1, digit)
+my_list.append(digit)
+my_list.sort(reverse=True)
 
 print(f"текущий список - {my_list}")
 print('***')
@@ -119,6 +107,44 @@ print('***')
 # т.е. запрашивать все данные у пользователя.
 print("Урок 2. Задание 6.")
 
+index = 1
+result = []
 
+specification = ['название', 'цена', 'количество', 'eд']
+
+while True:
+    question = input("Add new item? (Yes/No)")
+
+    if question.lower() != 'yes' and question.lower() != 'y':
+        break
+
+    item = {}
+
+    for spec in specification:
+        item_data = input(f"Input {spec}: ")
+
+        if item_data.isdigit():
+            item[spec] = int(item_data)
+        else:
+            item[spec] = item_data
+
+    result.append(tuple([index, item]))
+
+    index += 1
+
+print(result)
+
+result_dict = {}
+
+for item in specification:
+
+    for _, param in result:
+
+        if result_dict.get(item):
+            result_dict[item].append(param.get(item))
+        else:
+            result_dict[item] = [param.get(item)]
+
+print(result_dict)
 
 print('Задание выполнено!')
