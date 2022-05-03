@@ -1,4 +1,4 @@
 Geek/C#/.vs/*
 Add_courses/Python/.idea/*
 AI/Python/.idea/*
-**/__pycache__
+**__pycache__/
