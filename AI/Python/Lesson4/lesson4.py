@@ -7,6 +7,7 @@ from sys import argv
 import module
 from functools import reduce
 from itertools import count, cycle
+from math import factorial
 
 # 1. Реализовать скрипт, в котором должна быть предусмотрена функция расчета заработной платы сотрудника. В расчете
 # необходимо использовать формулу: (выработка в часах * ставка в час) + премия. Для выполнения расчета для конкретных
@@ -109,7 +110,11 @@ print('\n')
 # Например, факториал четырёх 4! = 1 * 2 * 3 * 4 = 24.
 print('Task 7\n')
 
-
-
-print('\n')
-
+N = int(input('N = '))
+el = 1
+for el in module.fact():
+    if el < N:
+        print(el)
+        el += 1
+    else:
+        break

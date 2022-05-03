@@ -1,4 +1,6 @@
 from random import randint
+from math import factorial
+from itertools import count
 
 def gen_randint_list(N):
     '''
@@ -26,3 +28,7 @@ def compare(list):
         if list[el] > list[el - 1]:
             new_list.append(list[el])
     return new_list
+
+def fact():
+    for el in count(1):
+        yield  factorial(el)
