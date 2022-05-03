@@ -4,8 +4,9 @@
 # import
 
 from sys import argv
-from Lesson4 import module
+import module
 from functools import reduce
+from itertools import count, cycle
 
 # 1. Реализовать скрипт, в котором должна быть предусмотрена функция расчета заработной платы сотрудника. В расчете
 # необходимо использовать формулу: (выработка в часах * ставка в час) + премия. Для выполнения расчета для конкретных
@@ -49,7 +50,11 @@ print('\n')
 print('Task 4\n')
 
 N = int(input('N = '))
+
 list = module.gen_randint_list(N)
+print(list)
+new_list = [el for el in list if list.count(el) == 1]
+print(new_list)
 
 print('\n')
 # 5. Реализовать формирование списка, используя функцию range() и возможности генератора. В список должны войти
@@ -58,7 +63,8 @@ print('\n')
 # Подсказка: использовать функцию reduce().
 print('Task 5\n')
 
-list = [el for el in range(100, 1001)]
+# list = [el for el in range(100, 103) if el % 2 == 0]
+list = [el for el in range(100, 1001, 2)]
 print(reduce(lambda num1, num2: num1 * num2, list))
 
 print('\n')
@@ -70,7 +76,29 @@ print('\n')
 # предусмотреть условие, при котором повторение элементов списка будет прекращено.
 print('Task 6\n')
 
+# if len(argv) == 2:
+#     skript_name, N = argv
+#     for el in count(int(N)):
+#         if el < 11:
+#             print(el)
+#         else:
+#             break
 
+if len(argv) == 2:
+    skript_name, N = argv
+    for el in count(int(N)):
+        if el == 11:
+            break
+        print(el)
+
+list = [None, 'asdaksjh', 123, False, 123, 'kashdg', None]
+count = 0
+
+for el in cycle(list):
+    if count == 11:
+        break
+    print(el)
+    count += 1
 
 print('\n')
 # 7. Реализовать генератор с помощью функции с ключевым словом yield, создающим очередное значение.
