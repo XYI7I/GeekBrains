@@ -112,6 +112,7 @@ print('Task 7\n')
 
 N = int(input('N = '))
 item = 1
+
 for el in module.fact():
     if item <= N:
         print(el)
