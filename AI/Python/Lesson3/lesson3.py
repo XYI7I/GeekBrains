@@ -57,6 +57,7 @@ print('***')
 print("Урок 3. Задание 4.")
 
 import math
+
 def my_func(x, y):
     print(x**y)
     i = 0
@@ -65,10 +66,12 @@ def my_func(x, y):
         result = result / x
         i += 1
     print(result)
+
 arg1 = int(input('Введите целое положительное число x: '))
 while arg1 < 0:
     print('Число должно быть положительным')
     arg1 = int(input('Введите целое положительное число x: '))
+
 arg2 = int(input('Введите целое отрицательное число y: '))
 while arg2 > 0:
     print('Число должно быть отрицательным')
