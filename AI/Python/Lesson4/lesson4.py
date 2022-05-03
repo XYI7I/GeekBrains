@@ -111,10 +111,10 @@ print('\n')
 print('Task 7\n')
 
 N = int(input('N = '))
-el = 1
+item = 1
 for el in module.fact():
-    if el < N:
+    if item <= N:
         print(el)
-        el += 1
+        item += 1
     else:
         break
