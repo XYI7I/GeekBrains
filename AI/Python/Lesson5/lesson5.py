@@ -12,6 +12,8 @@ with open("my_data.txt", 'w', encoding="utf-8") as f_obj:
         str_data = input('Введите данные: ')
         f_obj.writelines(str_data + '\n')
 
+f_obj.close()
+
 print('***')
 
 # Создать текстовый файл (не программно), сохранить в нем несколько строк, выполнить подсчет количества строк, количества слов в каждой строке.
@@ -24,6 +26,8 @@ with open("text.txt", 'r', encoding="utf-8") as f_obj:
         print(f'количества слов в строке: {len(word)}')
         i += 1
     print('количества строк =', i)
+
+f_obj.close()
 
 print('***')
 
@@ -40,6 +44,8 @@ with open("staff.txt", 'r', encoding="utf-8") as f_obj:
         if int(pers[1]) < 20000:
             print(f'сотрудник {pers[0]} имеет оклад менее 20 тыс')
     print(f'Средняя величина дохода сотрудников: {Sum_w / i}')
+
+f_obj.close()
 
 print('***')
 
@@ -60,6 +66,8 @@ with open("numerals.txt", 'r', encoding="utf-8") as f_obj:
         with open("numerals_new.txt", 'w', encoding="utf-8") as f_obj_new:
             f_obj_new.writelines(new_line)
 
+f_obj.close()
+
 print('***')
 
 # Создать (программно) текстовый файл, записать в него программно набор чисел, разделенных пробелами. Программа должна подсчитывать сумму чисел в файле и выводить ее на экран.
@@ -76,7 +84,11 @@ with open("my_data_num.txt", 'r', encoding="utf-8") as f_obj:
     number = f_obj.readline().split()
     for el in range(len(number)):
         res = res + int(number[el])
+with open("my_data_num.txt", 'a', encoding="utf-8") as f_obj:
+    f_obj.write("\nСумма: " + str(res))
     print(f'Сумма всех чисел: {res}')
+
+f_obj.close()
 
 print('***')
 
@@ -96,6 +108,8 @@ with open("lessons.txt", 'r', encoding="utf-8") as f_obj:
         subject, lecture, practice, lab = line.split()
         subj[subject] = int(lecture) + int(practice) + int(lab)
         print(f'Общее количество часов по предмету {subject} {subj[subject]}')
+
+f_obj.close()
 print(subj)
 print('***')
 
@@ -134,11 +148,15 @@ with open('firm.txt', 'r', encoding="utf-8") as file:
     profit.update(pr)
     print(f'Прибыль каждой компании - {profit}')
 
+file.close()
+
 with open('firm.json', 'w', encoding="utf-8") as write_js:
     json.dump(profit, write_js)
 
     js_str = json.dumps(profit)
     print(f'Создан файл с расширением json со следующим содержимым: \n '
           f' {js_str}')
+
+write_js.close()
 
 print('Задание выполнено!')
