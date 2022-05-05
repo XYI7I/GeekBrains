@@ -12,8 +12,6 @@ with open("my_data.txt", 'w', encoding="utf-8") as f_obj:
         str_data = input('Введите данные: ')
         f_obj.writelines(str_data + '\n')
 
-f_obj.close()
-
 print('***')
 
 # Создать текстовый файл (не программно), сохранить в нем несколько строк, выполнить подсчет количества строк, количества слов в каждой строке.
@@ -26,8 +24,6 @@ with open("text.txt", 'r', encoding="utf-8") as f_obj:
         print(f'количества слов в строке: {len(word)}')
         i += 1
     print('количества строк =', i)
-
-f_obj.close()
 
 print('***')
 
