@@ -1,3 +1,7 @@
-import os
+class User(object):
+    def __str__(self):
+        return 'User'
 
-print(os.listdir())
+my_user = User()
+
+print(my_user)
