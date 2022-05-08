@@ -5,6 +5,7 @@
 
 # Создать класс TrafficLight (светофор) и определить у него один атрибут color (цвет) и метод running (запуск). Атрибут реализовать как приватный. В рамках метода реализовать переключение светофора в режимы: красный, желтый, зеленый. Продолжительность первого состояния (красный) составляет 7 секунд, второго (желтый) — 2 секунды, третьего (зеленый) — на ваше усмотрение. Переключение между режимами должно осуществляться только в указанном порядке (красный, желтый, зеленый). Проверить работу примера, создав экземпляр и вызвав описанный метод.
 # Задачу можно усложнить, реализовав проверку порядка режимов, и при его нарушении выводить соответствующее сообщение и завершать скрипт.
+from distlib.compat import raw_input
 
 print(
     "Урок 6. Задание 1.\n\nСоздать класс TrafficLight (светофор) и определить у него один атрибут color (цвет) и "
@@ -16,21 +17,15 @@ print(
     "и при его нарушении выводить соответствующее сообщение и завершать скрипт.\n")
 
 from time import sleep
-import msvcrt
-import os
-import sys, click, keyboard
+
+# import msvcrt
+# import os
+import os, sys, click, keyboard
+
 
 # from threading import Thread
-# from pynput.keyboard import Key, Controllqqwwwwwwer
+# from pynput.keyboard import Key, Controller
 # from pynput import keyboard
-print(msvcrt.kbhit(' '))
-while True:
-    x = msvcrt.kbhit()
-    sleep(1)
-    k = msvcrt.getch()
-    print(x, k)
-    if k == 101:
-        print("Нажата E")
 
 
 class TrafficLight:
@@ -48,19 +43,22 @@ class TrafficLight:
         # The event listener will be running in this block
 
         i = 0
+
         print('Для завершения программы нажмите "Пробел"\n')
         print('Светофор работает\n')
+
+        keyboard.add_hotkey('space', quit())
 
         while True:
 
             print(f'{TrafficLight.__color[i % 3]}\n')
 
             if i % 3 == 0:
-                sleep(7)
-            elif i % 3 == 1:
                 sleep(2)
+            elif i % 3 == 1:
+                sleep(1)
             elif i % 3 == 2:
-                sleep(7)
+                sleep(2)
             i += 1
 
 
