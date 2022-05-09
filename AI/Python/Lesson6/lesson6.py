@@ -17,16 +17,12 @@ print(
     "и при его нарушении выводить соответствующее сообщение и завершать скрипт.\n")
 
 from time import sleep
-
-# import msvcrt
-# import os
-import os, sys, click, keyboard
+import msvcrt, os, sys, click, keyboard
 
 
 # from threading import Thread
 # from pynput.keyboard import Key, Controller
 # from pynput import keyboard
-
 
 class TrafficLight:
     """
@@ -44,23 +40,25 @@ class TrafficLight:
 
         i = 0
 
-        print('Для завершения программы нажмите "Пробел"\n')
+        print('Для завершения программы нажмите "Ctrl+C" или "Del"\n')
         print('Светофор работает\n')
 
-        keyboard.add_hotkey('space', quit())
+        try:
+            i = 1
 
-        while True:
+            while True:
+                print(f'{TrafficLight.__color[i % 3]}\n')
 
-            print(f'{TrafficLight.__color[i % 3]}\n')
+                if i % 3 == 0:
+                    sleep(2)
+                elif i % 3 == 1:
+                    sleep(1)
+                elif i % 3 == 2:
+                    sleep(2)
+                i += 1
 
-            if i % 3 == 0:
-                sleep(2)
-            elif i % 3 == 1:
-                sleep(1)
-            elif i % 3 == 2:
-                sleep(2)
-            i += 1
-
+        except KeyboardInterrupt:
+            print('exit')
 
 TrafficLight = TrafficLight()
 TrafficLight.run()
