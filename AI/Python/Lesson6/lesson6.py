@@ -5,7 +5,7 @@
 
 # Создать класс TrafficLight (светофор) и определить у него один атрибут color (цвет) и метод running (запуск). Атрибут реализовать как приватный. В рамках метода реализовать переключение светофора в режимы: красный, желтый, зеленый. Продолжительность первого состояния (красный) составляет 7 секунд, второго (желтый) — 2 секунды, третьего (зеленый) — на ваше усмотрение. Переключение между режимами должно осуществляться только в указанном порядке (красный, желтый, зеленый). Проверить работу примера, создав экземпляр и вызвав описанный метод.
 # Задачу можно усложнить, реализовав проверку порядка режимов, и при его нарушении выводить соответствующее сообщение и завершать скрипт.
-from distlib.compat import raw_input
+# from distlib.compat import raw_input
 
 print(
     "Урок 6. Задание 1.\n\nСоздать класс TrafficLight (светофор) и определить у него один атрибут color (цвет) и "
@@ -17,7 +17,7 @@ print(
     "и при его нарушении выводить соответствующее сообщение и завершать скрипт.\n")
 
 from time import sleep
-import msvcrt, os, sys, click, keyboard
+# import msvcrt, os, sys, click, keyboard
 
 
 # from threading import Thread
@@ -40,7 +40,7 @@ class TrafficLight:
 
         i = 0
 
-        print('Для завершения программы нажмите "Ctrl+C" или "Del"\n')
+        print('Для завершения программы нажмите "Ctrl+C"\n')
         print('Светофор работает\n')
 
         try:
@@ -60,6 +60,7 @@ class TrafficLight:
         except KeyboardInterrupt:
             print('exit')
 
+
 TrafficLight = TrafficLight()
 TrafficLight.run()
 
@@ -74,22 +75,28 @@ print("Урок 6. Задание 2.")
 
 
 class Road:
-    def __init__(self, _length, _width):
-        self._length = _length
-        self._width = _width
+    def __init__(self, length, width):
+        self.__length = length
+        self.__width = width
+
+    def square(self):
+        return self.__length * self.__width
 
 
 class RoadLoad(Road):
-    def __init__(self, _length, _width, _mass, _thickness):
-        super().__init__(_length, _width)
-        self.volume = _mass * _thickness
+    def __init__(self, length, width, mass, thickness):
+        super().__init__(length, width)
+        self.volume = mass * thickness
 
     def load(self):
-        return self._length * self._width * self.volume
+        return Road.square(self) * self.volume
 
 
 r = RoadLoad(5000, 20, 25, 5)
+
 print(f'Масса асфальта, необходимого для покрытия всего дорожного полотна: {int(r.load() / 1000)} т')
+# print(Road.__lenght)
+# print(Road.square(r))
 
 print('***')
 
