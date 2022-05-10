@@ -16,31 +16,35 @@ class Matrix:
     def __init__(self, list_1, list_2):
         self.list_1 = list_1
         self.list_2 = list_2
+        self.init_matrix = [[0 for j in range(len(self.list_1[0]))] for i in range(len(self.list_1))]
 
     def __add__(self):
-        init_matrix = [[0, 0, 0],
-                       [0, 0, 0],
-                       [0, 0, 0]]
+        if len(self.list_1) == len(self.list_2) and len(self.list_1[0]) == len(self.list_2[0]):
+            for i in range(len(self.list_1)):
 
-        for i in range(len(self.list_1)):
+                for j in range(len(self.list_2[0])):
+                    self.init_matrix[i][j] = (self.list_1[i][j] + self.list_2[i][j])
+        else:
+            print('error')
 
-            for j in range(len(self.list_2[i])):
-                init_matrix[i][j] = self.list_1[i][j] + self.list_2[i][j]
-
-        return str('\n'.join(['\t'.join([str(j) for j in i]) for i in init_matrix]))
+        return str('\n'.join(['\t'.join([str(j) for j in i]) for i in self.init_matrix]) + '\n')
 
     def __str__(self):
-        return str('\n'.join(['\t'.join([str(j) for j in i]) for i in init_matrix]))
+        return str('\n'.join(['\t'.join([str(j) for j in i]) for i in self.list_1]) + '\n\n' + '\n'.join(
+            ['\t'.join([str(j) for j in i]) for i in self.list_2]))
 
 
 my_matrix = Matrix([[1, 2, 3],
                     [5, 8, 13],
+                    [21, 34, 45],
                     [21, 34, 45]],
                    [[45, 34, 21],
                     [13, 8, 5],
-                    [3, 2, 1]])
+                    [3, 2, 1],
+                    [21, 34, 45]])
 
 print(my_matrix.__add__())
+print(my_matrix.__str__())
 
 print('***')
 
