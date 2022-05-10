@@ -12,39 +12,46 @@
 print("Урок 7. Задание 1.")
 
 
+print('Урок 7. Задание 1.')
+print('Реализовать класс Matrix (матрица).\n'
+      'Обеспечить перегрузку конструктора класса (метод __init__()), который должен принимать данные (список списков) для формирования матрицы.\n'
+      'Следующий шаг — реализовать перегрузку метода __str__() для вывода матрицы в привычном виде.\n'
+      'Далее реализовать перегрузку метода __add__() для реализации операции сложения двух объектов класса Matrix (двух матриц).\n'
+      'Результатом сложения должна быть новая матрица.')
+
+
 class Matrix:
-    def __init__(self, list_1, list_2):
-        self.list_1 = list_1
-        self.list_2 = list_2
-        self.init_matrix = [[0 for j in range(len(self.list_1[0]))] for i in range(len(self.list_1))]
+    def __init__(self, list):
+        self.list = list
 
-    def __add__(self):
-        if len(self.list_1) == len(self.list_2) and len(self.list_1[0]) == len(self.list_2[0]):
-            for i in range(len(self.list_1)):
+    def __str__(self):
+        return str('\n'.join(['\t'.join([str(j) for j in i]) for i in self.list]) + '\n')
 
-                for j in range(len(self.list_2[0])):
-                    self.init_matrix[i][j] = (self.list_1[i][j] + self.list_2[i][j])
+    def __add__(self, other):
+        self.add_matrix = [[0 for j in range(len(self.list[0]))] for i in range(len(self.list))]
+        if len(self.list) == len(other.list) and len(self.list[0]) == len(other.list[0]):
+            for i in range(len(self.list)):
+                for j in range(len(other.list[0])):
+                    self.add_matrix[i][j] = (self.list[i][j] + other.list[i][j])
+            return Matrix(self.add_matrix)
+
         else:
             print('error')
 
-        return str('\n'.join(['\t'.join([str(j) for j in i]) for i in self.init_matrix]) + '\n')
 
-    def __str__(self):
-        return str('\n'.join(['\t'.join([str(j) for j in i]) for i in self.list_1]) + '\n\n' + '\n'.join(
-            ['\t'.join([str(j) for j in i]) for i in self.list_2]))
+my_matrix1 = Matrix([[1, 2, 3],
+                     [5, 8, 13],
+                     [21, 34, 45],
+                     [21, 34, 45]])
 
+my_matrix2 = Matrix([[45, 34, 21],
+                     [13, 8, 5],
+                     [3, 2, 1],
+                     [21, 34, 45]])
 
-my_matrix = Matrix([[1, 2, 3],
-                    [5, 8, 13],
-                    [21, 34, 45],
-                    [21, 34, 45]],
-                   [[45, 34, 21],
-                    [13, 8, 5],
-                    [3, 2, 1],
-                    [21, 34, 45]])
-
-print(my_matrix.__add__())
-print(my_matrix.__str__())
+print(my_matrix1)
+print(my_matrix2)
+print(my_matrix2 + my_matrix1)
 
 print('***')
 
