@@ -117,3 +117,70 @@ class ParentClass:
 
     def my_method(self):
         print('Method ParentsClass')
+
+
+my_list = [30, 105.6, 'text', True]
+for elem in my_list:
+    print(elem)
+
+
+class IterObj:
+    def __init__(self, start, stop):
+        self.start = start - 1
+        self.stop = stop
+
+    def __next__(self):
+        self.start += 1
+        if self.start < self.stop:
+            return self.start
+        else:
+            raise StopIteration
+
+    def __iter__(self):
+        return self
+
+
+for elem in IterObj(2, 9):
+    print(elem)
+
+
+class Auto:
+    auto_color = 'red'
+
+    @property
+    def get_color(self):
+        return self.auto_color
+
+
+my_auto = Auto()
+print(my_auto.auto_color)
+print(my_auto.get_color)
+
+
+class Auto:
+    # конструктор класса Auto
+    def __init__(self, year):
+        # Инициализация свойств.
+        self.year = year
+
+    # создаем свойство года
+    @property
+    def year(self):
+        return self.__year
+
+    # сеттер для создания свойств
+    @year.setter
+    def year(self, year):
+        if year < 2000:
+            self.__year = 2000
+        elif year > 2019:
+            self.__year = 2019
+        else:
+            self.__year = year
+
+    def get_auto_year(self):
+        return f"Автомобиль выпущен в {str(self.year)} году"
+
+
+a = Auto(2009)
+print(a.get_auto_year())
