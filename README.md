@@ -1,12 +1,12 @@
 # GeekBrains
 Education repository
 
-## AI
+### AI
 
 Факультет
 Искусственного интеллекта
 
-## Geek
+### Geek
 
 Факультет
 Разработчик - Geek
