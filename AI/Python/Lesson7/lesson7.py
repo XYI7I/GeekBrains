@@ -117,20 +117,16 @@ class Cell:
         self.quantity = int(quantity)
 
     def __str__(self):
-        return f'Результат операции {self.quantity * "*"}'
+        if self.quantity > 0:
+            return f'{self.quantity * "*"}'
+        else:
+            return f'невозможное состояние'
 
     def __add__(self, other):
         return Cell(self.quantity + other.quantity)
 
     def __sub__(self, other):
-        '''
-        Выдает ошибку о том, что результат не число  при вычислении
-        if int(Cell(self.quantity - other.quantity)) > 0:
-            return Cell(int(self.quantity - other.quantity))
-        else:
-            return f'Операция вычитания невозможна'""
-        '''
-        return self.quantity - other.quantity if (self.quantity - other.quantity) > 0 else print('Отрицательно!')
+        return Cell(self.quantity - other.quantity)
 
     def __mul__(self, other):
         return Cell(int(self.quantity * other.quantity))
@@ -140,19 +136,28 @@ class Cell:
 
     def make_order(self, cells_in_row):
         row = ''
-        for i in range(int(self.quantity / cells_in_row)):
-            row += f'{"*" * cells_in_row} \\n'
-        row += f'{"*" * (self.quantity % cells_in_row)}'
-        return row
+        if cells_in_row <= self.quantity:
+            for i in range(int(self.quantity / cells_in_row)):
+                row += f'{"*" * cells_in_row} \n'
+                row += f'{"*" * (self.quantity % cells_in_row)}'
+            return row
+        else:
+            return Cell(self.quantity)
 
 
 cells1 = Cell(10)
 cells2 = Cell(2)
+
 print(cells1)
+
 print(cells1 + cells2)
 print(cells2 - cells1)
-print(cells2.make_order(5))
-print(cells1.make_order(10))
 print(cells1 / cells2)
+print(cells1 * cells2)
+
+print(cells2.make_order(1))
+print(cells1.make_order(2))
+print(cells1.make_order(20))
+
 
 print('Задание выполнено!')
