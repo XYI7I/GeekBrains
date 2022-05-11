@@ -6,6 +6,8 @@ Education repository
 Факультет
 Искусственного интеллекта
 
+[Link text Here](https://github.com/XYI7I/GeekBrains/edit/main/README.md)
+
 ### Geek
 
 Факультет
