@@ -14,3 +14,5 @@ Education repository
 
 Факультет
 Разработчик - Geek
+>[Знакомство с языками программирования - C#](https://github.com/XYI7I/GeekBrains/tree/main/Geek/C%23)<br>
+>[Введение в контроль версий - git](https://github.com/XYI7I/GeekBrains/tree/main/Geek/Git)
