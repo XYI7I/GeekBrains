@@ -11,12 +11,6 @@
 # Подсказка: сложение элементов матриц выполнять поэлементно — первый элемент первой строки первой матрицы складываем с первым элементом первой строки второй матрицы и т.д.
 print("Урок 7. Задание 1.")
 
-print('Реализовать класс Matrix (матрица).\n'
-      'Обеспечить перегрузку конструктора класса (метод __init__()), который должен принимать данные (список списков) для формирования матрицы.\n'
-      'Следующий шаг — реализовать перегрузку метода __str__() для вывода матрицы в привычном виде.\n'
-      'Далее реализовать перегрузку метода __add__() для реализации операции сложения двух объектов класса Matrix (двух матриц).\n'
-      'Результатом сложения должна быть новая матрица.')
-
 
 class Matrix:
     def __init__(self, list):
@@ -60,19 +54,13 @@ print('***')
 # 0.5), для костюма (2 * H + 0.3). Проверить работу этих методов на реальных данных. Реализовать общий подсчет
 # расхода ткани. Проверить на практике полученные на этом уроке знания: реализовать абстрактные классы для основных
 # классов проекта, проверить на практике работу декоратора @property.
-print("Урок 7. Задание 2.")
+print('Урок 7. Задание 2.')
 
 
 class Clothes:
-    def __init__(self, V_size, H_size):
+    def __init__(self, V_size=None, H_size=None):
         self.V_size = V_size
         self.H_size = H_size
-
-    def get_square_coat(self):
-        return self.V_size / 6.5 + 0.5
-
-    def get_square_suit(self):
-        return self.H_size * 2 + 0.3
 
     @property
     def get_sq_full(self):
@@ -81,7 +69,7 @@ class Clothes:
 
 
 class Coat(Clothes):
-    def __init__(self, V_size, H_size):
+    def __init__(self, V_size, H_size=None):
         super().__init__(V_size, H_size)
         self.square_coat = self.V_size / 6.5 + 0.5
 
@@ -90,7 +78,7 @@ class Coat(Clothes):
 
 
 class Suit(Clothes):
-    def __init__(self, V_size, H_size):
+    def __init__(self, H_size, V_size=None):
         super().__init__(V_size, H_size)
         self.square_suit = self.H_size * 2 + 0.3
 
@@ -98,14 +86,10 @@ class Suit(Clothes):
         return f'Расход ткани на производство костюма {self.square_suit:.2g} м\u00b2'
 
 
-coat = Coat(2, 0)
-suit = Suit(0, 2)
+coat = Coat(6.5)
+suit = Suit(2)
 print(coat)
 print(suit)
-# print(get_sq_full)
-# print(suit.get_sq_full)
-# print(suit.get_square_coat())
-# print(suit.get_square_suit())
 
 print('***')
 
