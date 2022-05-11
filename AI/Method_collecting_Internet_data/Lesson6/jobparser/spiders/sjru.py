@@ -1,7 +1,7 @@
 import scrapy
 from scrapy.http import HtmlResponse
-from scraping.jobparser.items import JobparserItem
-from scraping.jobparser.selectors import ITEM_SELECTORS_SJ, NAVIGATION_SELECTORS
+from jobparser.items import JobparserItem
+from jobparser.selectors import ITEM_SELECTORS_SJ, NAVIGATION_SELECTORS
 
 class SjruSpider(scrapy.Spider):
     name = 'sjru'

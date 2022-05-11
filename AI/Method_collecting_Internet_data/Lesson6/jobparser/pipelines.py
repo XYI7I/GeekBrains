@@ -6,7 +6,7 @@
 
 # useful for handling different item types with a single interface
 import pymongo
-from scraping.jobparser.settings import MONGO_HOST, MONGO_PORT
+from jobparser.settings import MONGO_HOST, MONGO_PORT
 
 
 class JobparserPipeline:

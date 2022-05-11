@@ -1,8 +1,8 @@
 import scrapy
 import pymongo
 from scrapy.http import HtmlResponse
-from scraping.jobparser.items import JobparserItem
-from scraping.jobparser.selectors import ITEM_SELECTORS, NAVIGATION_SELECTORS
+from jobparser.items import JobparserItem
+from jobparser.selectors import ITEM_SELECTORS, NAVIGATION_SELECTORS
 
 
 class HhruSpider(scrapy.Spider):
