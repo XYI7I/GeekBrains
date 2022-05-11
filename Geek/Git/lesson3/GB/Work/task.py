@@ -38,8 +38,8 @@ class Array:
 
 from copy import copy
 
-array1 = Array([1, 2, 3])
-array2 = Array([45, 34])
+array1 = Array([-1, 1])
+array2 = Array([2, 1])
 copy_array = copy(array1)
 
 print(array1)
