@@ -1,7 +1,7 @@
 # [![GeekBrains](https://frontend-scripts.hb.bizmrg.com/unique-hf/svg/logo.svg)](https://gb.ru)
 Education repository
 
-### AI -Факультет Искусственного интеллекта
+### AI - Факультет Искусственного интеллекта
 
 * [Методы сбора и обработки данных из сети Интернет](https://github.com/XYI7I/GeekBrains/tree/main/AI/Method_collecting_Internet_data)<br>
 * [Основы языка Python](https://github.com/XYI7I/GeekBrains/tree/main/AI/Python)<br>
