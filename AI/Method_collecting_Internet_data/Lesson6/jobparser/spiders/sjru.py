@@ -3,6 +3,7 @@ from scrapy.http import HtmlResponse
 from jobparser.items import JobparserItem
 from jobparser.selectors import ITEM_SELECTORS_SJ, NAVIGATION_SELECTORS
 
+
 class SjruSpider(scrapy.Spider):
     name = 'sjru'
     allowed_domains = ['superjob.ru']
