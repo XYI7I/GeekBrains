@@ -1,0 +1,15 @@
+D:\greg\GitHub\Geek\C#\lesson2\HW\task3\obj\Debug\net6.0\task3.csproj.AssemblyReference.cache
+D:\greg\GitHub\Geek\C#\lesson2\HW\task3\obj\Debug\net6.0\task3.GeneratedMSBuildEditorConfig.editorconfig
+D:\greg\GitHub\Geek\C#\lesson2\HW\task3\obj\Debug\net6.0\task3.AssemblyInfoInputs.cache
+D:\greg\GitHub\Geek\C#\lesson2\HW\task3\obj\Debug\net6.0\task3.AssemblyInfo.cs
+D:\greg\GitHub\Geek\C#\lesson2\HW\task3\obj\Debug\net6.0\task3.csproj.CoreCompileInputs.cache
+D:\greg\GitHub\Geek\C#\lesson2\HW\task3\bin\Debug\net6.0\task3.exe
+D:\greg\GitHub\Geek\C#\lesson2\HW\task3\bin\Debug\net6.0\task3.deps.json
+D:\greg\GitHub\Geek\C#\lesson2\HW\task3\bin\Debug\net6.0\task3.runtimeconfig.json
+D:\greg\GitHub\Geek\C#\lesson2\HW\task3\bin\Debug\net6.0\task3.dll
+D:\greg\GitHub\Geek\C#\lesson2\HW\task3\bin\Debug\net6.0\task3.pdb
+D:\greg\GitHub\Geek\C#\lesson2\HW\task3\obj\Debug\net6.0\task3.dll
+D:\greg\GitHub\Geek\C#\lesson2\HW\task3\obj\Debug\net6.0\refint\task3.dll
+D:\greg\GitHub\Geek\C#\lesson2\HW\task3\obj\Debug\net6.0\task3.pdb
+D:\greg\GitHub\Geek\C#\lesson2\HW\task3\obj\Debug\net6.0\task3.genruntimeconfig.cache
+D:\greg\GitHub\Geek\C#\lesson2\HW\task3\obj\Debug\net6.0\ref\task3.dll
