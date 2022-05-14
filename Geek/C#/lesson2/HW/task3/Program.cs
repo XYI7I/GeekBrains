@@ -3,7 +3,7 @@ Console.WriteLine("Программа, которая выводит треть�
 
 Console.Write("Введите число: ");
 
-int number = int.Parse(Console.ReadLine());
+int num = int.Parse(Console.ReadLine());
 
 int absnum = Math.Abs(num);
 string text = absnum.ToString();
