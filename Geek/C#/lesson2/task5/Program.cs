@@ -7,12 +7,5 @@ int num1 = int.Parse(Console.ReadLine ());
 Console.Write("Второе число: ");
 int num2 = int.Parse(Console.ReadLine ());
 
-
-if (num1 == Math.Pow(num2, 2) || num2 == Math.Pow(num1, 2))
-{
-    Console.WriteLine(num1 + ", " + num2 + " -> да");
-}
-else
-{
-    Console.WriteLine(num1 + ", " + num2 + " -> нет");
-}
+string res =  num1 == num2 * num2 || num2 == num1 * num1 ? $"{num1}, {num2} -> да" : $"{num1}, {num2} -> нет";
+Console.WriteLine(res);

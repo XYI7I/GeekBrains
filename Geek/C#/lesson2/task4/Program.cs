@@ -4,11 +4,6 @@ Console.WriteLine("Программа, принимает на вход числ
 Console.Write("Введите число: ");
 int num1 = int.Parse(Console.ReadLine ());
 
-if (num1 % 7 == 0 && num1 % 23 == 0)
-{
-    Console.WriteLine(num1 + " -> да");
-}
-else
-{
-    Console.WriteLine(num1 + " -> нет");
-}
+string res =  num1 % 7 == 0 && num1 % 23 == 0 ? $"{num1} -> да" : $"{num1} -> нет";
+
+Console.WriteLine(res);
