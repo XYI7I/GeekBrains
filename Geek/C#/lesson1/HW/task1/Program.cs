@@ -2,10 +2,10 @@
 Console.WriteLine("Задание 1. Программа, которая принимает два числа и выдаёт какое большее, а какое меньшее.");
 
 Console.Write("Первое число: ");
-int numa = int.Parse(Console.ReadLine ());
+int numa = int.Parse(Console.ReadLine());
 
 Console.Write("Второе число: ");
-int numb = int.Parse(Console.ReadLine ());
+int numb = int.Parse(Console.ReadLine());
 
 if (numa > numb)
 {
