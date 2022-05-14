@@ -9,5 +9,4 @@ while (dig < 1 || dig > 7)
 
 string res = dig < 6? $"{dig} - нет": $"{dig} -> да";
 
-
 Console.WriteLine(res);
