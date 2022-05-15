@@ -30,11 +30,15 @@ void SquareArray_new(int Num)
         mas[i, 1] = (i + 1) * (i + 1);
     }
 
-    Console.WriteLine($"  Число  -> Квадрат");
+    Console.WriteLine($"   Число  -> Квадрат");
     for (int i = 0; i < Num; i++)
     {
-	    for (int j = 0; j < 2; j++)
-		    Console.Write(String.Format("{0,10}", "  " + mas[i, j] + "   |"));
+	    
+        for (int j = 0; j < 2; j++)
+        {
+            Console.Write(String.Format("{0,11}", "  " + mas[i, j] + "    |"));
+        }
+		    
 	    Console.WriteLine();
     } 
 }
