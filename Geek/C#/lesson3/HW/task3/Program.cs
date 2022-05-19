@@ -31,7 +31,7 @@ void SquareArray_new(int Num)
         mas[i, 1] = (i + 1) * (i + 1) * (i + 1);        
     }
 
-    Console.WriteLine($"   Число  -> Куб");
+    Console.WriteLine($"   Число  ->   Куб");
     for (int i = 0; i < Num; i++)
     {
 	    
