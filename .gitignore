@@ -4,6 +4,3 @@
 **/venv/
 /Add_courses/
 **/.vscode/
-**/obj/
-**/net6.0/
-*.csproj
