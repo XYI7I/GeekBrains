@@ -14,6 +14,6 @@
         452 -> 11
         82 -> 10
 
-> [Задача 29](https://github.com/XYI7I/GeekBrains/tree/main/Geek/C%23/lesson4/HW/task3/Program.cs): Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+> [Задача 29](https://github.com/XYI7I/GeekBrains/tree/main/Geek/C%23/lesson4/HW/task3/Program.cs): Напишите программу, которая задаёт массив из N элементов и выводит их на экран.
 
         1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
