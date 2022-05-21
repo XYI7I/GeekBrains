@@ -4,17 +4,16 @@ Console.WriteLine("Функция возвращает true, если в сло�
 void CharDoubl(string word)
 {
     bool check = false;
-    for (int i = 0; i <= word.Length - 1; i++)
+    for (int i = 0; i < word.Length - 1; i++)
     {
         if (word[i] == word[i + 1])
         {
             check = true;
-            break;
-            // i = word.Length;
+            i = word.Length;
         }
     }
 
     Console.WriteLine(check);
 }
 
-CharDoubl("112354");
+CharDoubl("12354");
