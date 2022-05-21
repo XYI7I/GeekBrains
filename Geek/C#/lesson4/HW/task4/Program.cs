@@ -1,7 +1,7 @@
 ﻿// **. Напишите функцию, которая принимает слово и возвращает true, если в этом слове есть две одинаковые, стоящие рядом буквы.
 Console.WriteLine("Функция возвращает true, если в слове есть две одинаковые, стоящие рядом буквы.");
 
-bool CharDoubl(string word)
+bool CharDouble(string word)
 {
     for (int i = 0; i < word.Length - 1; i++)
     {
@@ -17,6 +17,6 @@ bool CharDoubl(string word)
 
 // Console.Write("Введите слово: ");
 // string wordtest = Console.ReadLine ();
-// bool che = CharDoubl(wordtest);
-// Console.WriteLine(CharDoubl(wordtest));
-// Console.WriteLine(CharDoubl("112348sfergg"));
+// bool che = CharDouble(wordtest);
+// Console.WriteLine(CharDouble(wordtest));
+// Console.WriteLine(CharDouble("112348sfergg"));
