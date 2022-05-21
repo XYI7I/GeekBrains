@@ -2,7 +2,6 @@
 Console.WriteLine("Программу, которая принимает на вход число (A)и выдает сумму всех чисел от 1 до A.");
 
 Console.Write("Введите A: ");
-
 int a = int.Parse(Console.ReadLine ());
 
 int sum = 0;
