@@ -9,7 +9,8 @@ void CharDoubl(string word)
         if (word[i] == word[i + 1])
         {
             check = true;
-            i = word.Length;
+            break;
+            //i = word.Length;
         }
     }
 
