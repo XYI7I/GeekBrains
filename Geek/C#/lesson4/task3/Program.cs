@@ -3,11 +3,17 @@ Console.WriteLine("Программа, которая принимает на в
 
 Console.Write("Введите N: ");
 int N = int.Parse(Console.ReadLine ());
-int mult = 1;
-for (int i = 1; i <= N; i++)
- {
-     mult = mult * i;
 
- }
+void MultNum(int Num)
+{
+    int mult = 1;
+    for (int i = 1; i <= N; i++)
+    {
+        mult = mult * i;
 
- Console.WriteLine($"Произведение всех чисел от 1 до {N} = {mult}");
+    }
+
+    Console.WriteLine($"Произведение всех чисел от 1 до {N} = {mult}");
+}
+
+MultNum(N);
