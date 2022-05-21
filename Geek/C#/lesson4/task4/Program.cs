@@ -1,7 +1,7 @@
 ﻿// Программа по генерации одномерного массива:
 Console.WriteLine("Программа по генерации одномерного одномерного массива");
 
-void Gen_Array()
+int[] Gen_Array()
 {
     Console.Write("Введите число элементов массива: ");
     int N = int.Parse(Console.ReadLine ());
@@ -13,9 +13,10 @@ void Gen_Array()
         arr[i] = rand.Next(2);
         //Console.WriteLine(arr[i]);
     }
-
-    var str = string.Join(" ", arr);
-    Console.WriteLine(str);
+    return arr;
 }
 
-Gen_Array();
+int[] newarr = Gen_Array();
+
+var str = string.Join(" ", newarr);
+Console.WriteLine(str);
