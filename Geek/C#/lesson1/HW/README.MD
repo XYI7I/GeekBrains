@@ -6,7 +6,7 @@
 
 > [Задача 2](https://github.com/XYI7I/GeekBrains/blob/main/Geek/C%23/lesson1/HW/task1/Program.cs): Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
 
-        a = 5; b = 7 -> max = 7
+		a = 5; b = 7 -> max = 7
 		a = 2 b = 10 -> max = 10
 		a = -9 b = -3 -> max = -3
 		
