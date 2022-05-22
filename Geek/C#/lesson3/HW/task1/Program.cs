@@ -35,5 +35,26 @@ void Palindrom_str(int num5)
     }
 }
 
+void Palindrom_str1(int num)
+{
+    string text = num.ToString();
+    int j = text.Length - 1;
+
+    for (int i = 0; i < j; i++)
+    {
+        if (text[i] != text[j])
+        {
+            Console.WriteLine(num + " -> нет");
+        }
+        j--;
+    }      
+    Console.WriteLine(num + " -> да");    
+}
+
+
 Palindrom_num(num);
 Palindrom_str(num);
+
+Console.Write("Введите число: ");    
+num  = int.Parse(Console.ReadLine ()); 
+Palindrom_str1(num);
