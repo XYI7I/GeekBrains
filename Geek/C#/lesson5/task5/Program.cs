@@ -39,7 +39,6 @@ int[] MultPairArr(int[] arr)
 }
 
 
-
 int[] genarr = GenArray();
 PrintArray(genarr);
 int[] multgenarr = MultPairArr(genarr);
