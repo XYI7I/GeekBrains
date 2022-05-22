@@ -20,4 +20,5 @@ while distance > 10:
         friend = 1
     distance = distance - (first_friend_speed + second_friend_speed) * time
     count += 1
+    
 print(count)
