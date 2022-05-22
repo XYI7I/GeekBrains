@@ -33,5 +33,5 @@ int SumEvenIndArray(int[] arr)
 
 int[] newarr = GenArray();
 PrintArray(newarr);
-int counint = SumEvenIndArray(newarr);
-Console.WriteLine($"Сумма элементов в масиве стоящщих на четных местах -> {counint}");
+int sumevin = SumEvenIndArray(newarr);
+Console.WriteLine($"Сумма элементов в масиве стоящщих на четных местах -> {sumevin}");
