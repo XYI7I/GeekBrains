@@ -4,3 +4,6 @@
 **/venv/
 /Add_courses/
 **/.vscode/
+**/bin/
+**/obj/
+*.csproj
