@@ -23,4 +23,3 @@ void PrintArray(int[] prarr)
 
 int[] newarr = GenArray();
 PrintArray(newarr);
-
