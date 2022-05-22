@@ -23,7 +23,7 @@ void PrintArray(int[] prarr)
 
 int[] MultPairArr(int[] arr)
 {
-    int[] multarr = new int[arr.Length/2 + arr.Length%2];
+    int[] multarr = new int[arr.Length / 2 + arr.Length % 2];
     int j = arr.Length - 1;
     for (int i = 0; i < multarr.Length; i++)
     {
