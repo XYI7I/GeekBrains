@@ -1,4 +1,4 @@
-# Scrapy settings for avitoparser project
+# Scrapy settings for leroymerlin project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,21 +7,14 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'avitoparser'
+BOT_NAME = 'leroymerlin'
 
-IMAGES_STORE = 'images'
-IMAGES_THUMBS = {'medium': (320, 240),
-                 'small': (160, 120)}
+SPIDER_MODULES = ['leroymerlin.spiders']
+NEWSPIDER_MODULE = 'leroymerlin.spiders'
 
-SPIDER_MODULES = ['avitoparser.spiders']
-NEWSPIDER_MODULE = 'avitoparser.spiders'
-
-LOG_ENABLED = True
-LOG_LEVEL = 'DEBUG'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) ' \
-             'Chrome/92.0.4515.131 Safari/537.36 '
+USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
@@ -32,7 +25,7 @@ CONCURRENT_REQUESTS = 8
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 1.5
+DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
@@ -52,13 +45,13 @@ COOKIES_ENABLED = True
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'avitoparser.middlewares.AvitoparserSpiderMiddleware': 543,
+#    'leroymerlin.middlewares.LeroymerlinSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'avitoparser.middlewares.AvitoparserDownloaderMiddleware': 543,
+#    'leroymerlin.middlewares.LeroymerlinDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -70,10 +63,20 @@ COOKIES_ENABLED = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'avitoparser.pipelines.AvitoparserPipeline': 300,
-   'avitoparser.pipelines.AvitoPhotosPipeline': 200,
-
+   'leroymerlin.pipelines.LeroymerlinImagesPipeline': 299,
+'leroymerlin.pipelines.LeroymerlinPipeline': 300,
 }
+
+IMAGES_STORE = "images"
+IMAGES_THUMBS = {
+    "extra_small": (5, 5),
+    "big": (100, 100),
+    "random": (42, 42),
+    "more_random": (42, 31),
+}
+
+MONGO_HOST = "localhost"
+MONGO_PORT = 27017
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
