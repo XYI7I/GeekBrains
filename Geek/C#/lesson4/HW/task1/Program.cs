@@ -12,7 +12,7 @@ void PowNum()
     int pownum = num;
     for (int i = 1; i < pow; i++)
     {
-         pownum = pownum * pownum;
+         pownum = pownum * num;
     }
 
     Console.WriteLine($"{num} в степени {pow} = {pownum}");
