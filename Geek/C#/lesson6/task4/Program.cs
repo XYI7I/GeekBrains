@@ -7,14 +7,13 @@ while (n < 2)
 {
     Console.Write("Ведите число N: ");
     n = int.Parse(Console.ReadLine ());
-
 }
 
 
 void FibNum(int n)
 {
     int[] fibarr = new int[n];
-    fibarr [0] = 0;
+    // fibarr [0] = 0;
     fibarr [1] = 1;
     for (int i = 2; i < n; i++)
     {
