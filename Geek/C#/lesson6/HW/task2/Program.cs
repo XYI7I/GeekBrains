@@ -17,7 +17,8 @@ void CrossPoint(double k1, double b1, double k2, double b2)
 {
     double x = (b2 - b1) / (k1 - k2);
     double y = k1 * x + b1;
-    Console.WriteLine($"Координаты точки пересечения: ({Math.Round(x, 2)}, {Math.Round(y, 2)})");
+    double y1 = k2 * x + b2;
+    Console.WriteLine($"Координаты точки пересечения: ({Math.Round(x, 2)}, {Math.Round(y, 2)}; {Math.Round(y1, 2)})");
 }
 
 CrossPoint(cof_k1, cof_b1, cof_k2, cof_b2);
