@@ -4,7 +4,7 @@
 
 ### Урок 7. Как не нужно писать код. Часть 1
 
-> [Задача 47](https://github.com/XYI7I/GeekBrains/blob/main/Geek/C%23/lesson7/HW/task1/Program.cs): Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+> [Задача 47](https://github.com/XYI7I/GeekBrains/blob/main/Geek/C%23/lesson7/HW/task1/Program.cs): Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
 
         m = 3, n = 4.
         1 4 8 9
