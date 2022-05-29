@@ -33,5 +33,6 @@ void PrintDoubleArray(double[,] prarr)
     }
 }
 
+
 double[,] array = GenDoubleArray();
 PrintDoubleArray(array);
