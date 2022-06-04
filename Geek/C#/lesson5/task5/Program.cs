@@ -10,7 +10,7 @@ int[] GenArray()
 
     for (int i = 0; i < arr.Length; i++)
     {
-        arr[i] = rand.Next(100);
+        arr[i] = rand.Next(11);
     }
     return arr;
 }
@@ -30,7 +30,7 @@ int[] MultPairArr(int[] arr)
         if (i == j)
         {
             multarr[i] = arr[i];
-            break;
+            //break;
         }
         multarr[i] = arr[i] * arr[j];
         j--;
@@ -38,8 +38,24 @@ int[] MultPairArr(int[] arr)
     return multarr;
 }
 
+int[] MultPairArr1(int[] arr)
+{
+    int[] multarr = new int[arr.Length / 2 + arr.Length % 2];
+    int j = arr.Length - 1;
+    for (int i = 0; i <= j; i++)
+    {
+        if (i == j)
+        {
+            multarr[i] = arr[i];
+            //break;
+        }
+        multarr[i] = multarr.Append(arr[i] * arr[j]);
+        j--;
+    }
+    return multarr;
+}
 
 int[] genarr = GenArray();
 PrintArray(genarr);
-int[] multgenarr = MultPairArr(genarr);
+int[] multgenarr = MultPairArr1(genarr);
 PrintArray(multgenarr);

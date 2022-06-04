@@ -71,4 +71,4 @@ double[] newarr1 = GenDoubleArray();
 PrintDoubleArray(newarr1);
 
 double sumevin1 = SumEvenIndDoubleArray(newarr1);
-Console.WriteLine($"Сумма элементов в масиве стоящщих на четных местах -> {sumevin1}");
+Console.WriteLine($"Сумма элементов в масиве стоящщих на четных местах36 -> {sumevin1}");
