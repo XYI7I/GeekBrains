@@ -5,6 +5,7 @@ int[,] SpiralArrayNxN()
 {
     Console.Write("Введите размер массива NxN, N: ");
     int n = int.Parse(Console.ReadLine ());
+    //int n = 4;
     int[,] arr = new int[n, n];
     int k = 1;
     int itr = n/2 + n%2;
