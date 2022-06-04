@@ -45,8 +45,6 @@ void DecreaseRowArray(int[,] arr)
         for (int k = 0; k < arr.GetLength(1); k++)
             arr[i,k] = rowarr[k];
     }
-
-
 }
 
 int[,] arr = GenArray();

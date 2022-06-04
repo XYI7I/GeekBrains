@@ -32,3 +32,22 @@ void PrintArray(int[,] prarr)
         Console.WriteLine();
     }
 }
+
+void MinSumRowArray(int[,] arr)
+{
+    int minrow = 0;
+    int[] sumarr = new int[arr.GetLength(0)];
+            
+    for (int i = 0; i < arr.GetLength(0); i++)
+    {
+        for (int j = 0; j < arr.GetLength(1); j++)
+            sumarr[i] += arr[i, j];
+    }
+    minrow = Array.IndexOf(sumarr, sumarr.Min());
+    Console.WriteLine($"Cтрокa с наименьшей суммой элементов = {sumarr.Min()} --> строка {minrow + 1}.");
+}
+
+int[,] arr = GenArray();
+PrintArray(arr);
+Console.WriteLine();
+MinSumRowArray(arr);
