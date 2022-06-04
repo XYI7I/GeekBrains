@@ -32,3 +32,25 @@ void PrintArray(int[,] prarr)
         Console.WriteLine();
     }
 }
+
+void DecreaseRowArray(int[,] arr)
+{
+    int[] rowarr = new int[arr.GetLength(1)];
+    for (int i = 0; i < arr.GetLength(0); i++)
+    {
+        for (int j = 0; j < arr.GetLength(1); j++)
+            rowarr[j] = arr[i,j];
+        Array.Sort(rowarr);
+        Array.Reverse(rowarr);
+        for (int k = 0; k < arr.GetLength(1); k++)
+            arr[i,k] = rowarr[k];
+    }
+
+
+}
+
+int[,] arr = GenArray();
+PrintArray(arr);
+Console.WriteLine();
+DecreaseRowArray(arr);
+PrintArray(arr);

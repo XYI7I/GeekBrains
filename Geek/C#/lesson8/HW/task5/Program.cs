@@ -4,11 +4,11 @@ Console.WriteLine("Программа заполнит спиралыьно ма
 int[,] SpiralArray4x4()
 {
     int[,] arr = new int[4, 4];
-  
+    int k = 1;  
 
-    for (int i = 0; i < m; i++)
+    for (int i = 0; i < 4; i++)
     {
-        for (int j = 0; j < n; j++)
+        for (int j = 0; j < 4; j++)
         {
             arr[i, j] = k++;
         }
@@ -28,3 +28,24 @@ void PrintArray(int[,] prarr)
         Console.WriteLine();
     }
 }
+
+int[,] arr = SpiralArray4x4();
+PrintArray(arr);
+
+
+    0.0
+    0.1
+    0.2
+    0.3
+    1.3
+    2.3
+    3.3
+    3.2
+    3.1
+    3.0
+    2.0
+    1.0
+    1.1
+    1.2
+    2.2
+    2.1
