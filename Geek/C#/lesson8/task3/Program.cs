@@ -33,6 +33,16 @@ void PrintArray(int[,] prarr)
     }
 }
 
+int[] OneDimArray(int[,] arr)
+{
+    int [] newarr = new int[arr.GetLength(0) * arr.GetLength(1)];
+    for (int i = 0; i < arr.GetLength(0); i++)
+        for (int j = 0; j < arr.GetLength(1); j++)
+            newarr[i * arr.GetLength(1) + j] = arr[i,j];
+
+    return newarr;
+}
+
 
 void FrequencyList(int[,] arr)
 {
@@ -54,50 +64,36 @@ void FrequencyList(int[,] arr)
             Console.WriteLine($"{listar[k]} встречаеться {count} раз");
         }
         count = 0;
-    }
-
-        
-}
-
-int[] OneDimArray(int[,] arr)
-{
-    int [] newarr = new int[arr.GetLength(0) * arr.GetLength(1)];
-    for (int i = 0; i < arr.GetLength(0); i++)
-        for (int j = 0; j < arr.GetLength(1); j++)
-            newarr[i * arr.GetLength(1) + j] = arr[i,j];
-
-    return newarr;
-}
-
-void SortOneDimArray(int[] array)
-{
-    for (int i = 0; i < array.Length - 1; i++)
-    {
-        int minPosition = i;
-        for (int j = i + 1; j < array.Length; j++)
-        {
-            if (array[j] < array[minPosition]) minPosition = j;
-        }
-        int temparray = array[i];
-        array[i] = array[minPosition];
-        array[minPosition] = temparray;
-    }
+    }        
 }
 
 void FrequencyArr(int[,] arr)
 {
     int[] newarr = OneDimArray(arr);
-    SortOneDimArray(newarr);
-    int elem = newarr[0];
-    for (int i = 1; i < newarr.Length; i++)
+    Array.Sort(newarr);
 
+    var str = string.Join(" ", newarr);
+    Console.WriteLine(str);
+    
+    int[] sortArr = newarr.Distinct().ToArray();
+    
+    var str1 = string.Join(" ", sortArr);
+    Console.WriteLine(str1);
+
+    string [,] strarr = new string [sortArr.Length, 2];
+    for (int i = 0; i < sortArr.Length; i++)
+    {
+        strarr[i, 0] = sortArr[i].ToString();
+        Console.WriteLine(strarr[i,0]);
+    }
         
 }
+
+
+
 
 int[,] array = GenArray();
 PrintArray(array);
 Console.WriteLine();
 
-
-var str = string.Join(" ", newarray);
-Console.WriteLine(str);
+FrequencyArr(array);
