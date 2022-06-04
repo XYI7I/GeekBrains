@@ -32,3 +32,29 @@ void PrintArray(int[,] prarr)
         Console.WriteLine();
     }
 }
+
+int[,] MultArray(int[,] arr1, int[,] arr2)
+{
+    if (arr1.GetLength(1) != arr2.GetLength(0))
+    {
+        Console.WriteLine("Не возможно перемножение несовместных матриц!");
+        return null;
+    }
+    int[,] multarr = new int[arr1.GetLength(0), arr2.GetLength(1)];
+    for (int i = 0; i < multarr.GetLength(0); i++)
+        for (int j = 0; j < multarr.GetLength(1); j++)
+            for (int k = 0; k < arr1.GetLength(1); k++)
+                multarr[i,j] += arr1[i,k] * arr2[k,j];
+
+    return multarr;
+}
+
+int[,] arr1 = GenArray();
+PrintArray(arr1);
+Console.WriteLine();
+int[,] arr2 = GenArray();
+PrintArray(arr2);
+Console.WriteLine();
+
+int[,] multarr = MultArray(arr1, arr2);
+PrintArray(multarr);
