@@ -84,13 +84,20 @@ void SortOneDimArray(int[] array)
     }
 }
 
+void FrequencyArr(int[,] arr)
+{
+    int[] newarr = OneDimArray(arr);
+    SortOneDimArray(newarr);
+    int elem = newarr[0];
+    for (int i = 1; i < newarr.Length; i++)
+
+        
+}
+
 int[,] array = GenArray();
 PrintArray(array);
 Console.WriteLine();
 
-int[] newarray = OneDimArray(array);
+
 var str = string.Join(" ", newarray);
 Console.WriteLine(str);
-SortOneDimArray(newarray);
-var str1 = string.Join(" ", newarray);
-Console.WriteLine(str1);
