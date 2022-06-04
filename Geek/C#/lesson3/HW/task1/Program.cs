@@ -45,6 +45,7 @@ void Palindrom_str1(int num)
         if (text[i] != text[j])
         {
             Console.WriteLine(num + " -> нет");
+            break;
         }
         j--;
     }      

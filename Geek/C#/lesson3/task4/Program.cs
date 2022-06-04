@@ -2,15 +2,15 @@
 Console.WriteLine("Программа, которая принимает на вход координаты двух точек и находит расстояние между ними в 2D пространстве.");
 
 // Координаты первой точки
-Console.Write("Ведите координату первой точки X1: ");
+Console.Write("Введите координату первой точки X1: ");
 int coord_X1 = int.Parse(Console.ReadLine ());
-Console.Write("Ведите координату первой точки Y1: ");
+Console.Write("Введите координату первой точки Y1: ");
 int coord_Y1 = int.Parse(Console.ReadLine ());
 
 // Координаты второй точки
-Console.Write("Ведите координату второй точки X2: ");
+Console.Write("Введите координату второй точки X2: ");
 int coord_X2 = int.Parse(Console.ReadLine ());
-Console.Write("Ведите координату второй точки Y2: ");
+Console.Write("Введите координату второй точки Y2: ");
 int coord_Y2 = int.Parse(Console.ReadLine ());
 
 void Distance(int x1, int y1, int x2, int y2)
