@@ -64,8 +64,24 @@ int[] OneDimArray(int[,] arr)
     int [] newarr = new int[arr.GetLength(0) * arr.GetLength(1)];
     for (int i = 0; i < arr.GetLength(0); i++)
         for (int j = 0; j < arr.GetLength(1); j++)
-            newarr[i + j] = arr[i,j];
+            newarr[i * arr.GetLength(1) + j] = arr[i,j];
+
     return newarr;
+}
+
+void SortOneDimArray(int[] array)
+{
+    for (int i = 0; i < array.Length - 1; i++)
+    {
+        int minPosition = i;
+        for (int j = i + 1; j < array.Length; j++)
+        {
+            if (array[j] < array[minPosition]) minPosition = j;
+        }
+        int temparray = array[i];
+        array[i] = array[minPosition];
+        array[minPosition] = temparray;
+    }
 }
 
 int[,] array = GenArray();
@@ -73,8 +89,8 @@ PrintArray(array);
 Console.WriteLine();
 
 int[] newarray = OneDimArray(array);
-PrintArray(newarray);
-
-Console.WriteLine();
-
-FrequencyList(array);
+var str = string.Join(" ", newarray);
+Console.WriteLine(str);
+SortOneDimArray(newarray);
+var str1 = string.Join(" ", newarray);
+Console.WriteLine(str1);
