@@ -14,4 +14,11 @@ void SumDigNum(int num, int sum = 0)
     SumDigNum(num/10, sum + num%10);
 }
 
-SumDigNum(num);
+int SumDigNumInt(int num)
+{
+    if(num/10 == 0) return num%10;
+    num = num%10 + SumDigNumInt(num/10);
+    return num;   
+}
+
+Console.WriteLine($"Сумма цифр чисдла {num} = {SumDigNumInt(num)}");
