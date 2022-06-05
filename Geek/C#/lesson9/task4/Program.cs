@@ -17,4 +17,11 @@ void PowNum(int num, int pow, int pownum = 1)
     PowNum(num, pow, pownum);
 }
 
-PowNum(num, pow);
+int PowNumInt(int num, int pow)
+{   
+    if (pow == 0) return 1;
+    num = num * PowNumInt(num, --pow);
+    return num;
+}
+
+Console.WriteLine($"Число {num} в степени {pow} = {PowNumInt(num, pow)}.");
