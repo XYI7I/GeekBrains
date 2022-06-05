@@ -1,34 +1,20 @@
-﻿// . 
-Console.WriteLine("Программа ");
+﻿// 69. Напишите программу, которая на вход принимает два числа A и B, и возводит число А в целую степень B с помощью рекурсии.
+Console.WriteLine("Программа принимает два числа A и B, и возводит число А в целую степень B");
 
-int[,] GenArray()
-{
-    Console.Write("Введите число строк массива m: ");
-    int m = int.Parse(Console.ReadLine ());
-    Console.Write("Введите число столбцов массива n: ");
-    int n = int.Parse(Console.ReadLine ());
-    int[,] arr = new int[m, n];
-    Random rand = new Random();
+Console.Write("Введите число: ");
+int num = int.Parse(Console.ReadLine ());
+Console.Write("Введите степень: ");
+int pow = int.Parse(Console.ReadLine ());
 
-    for (int i = 0; i < m; i++)
+void PowNum(int num, int pow, int pownum = 1)
+{   if(pow == 0)
     {
-        for (int j = 0; j < n; j++)
-        {
-            arr[i, j] = rand.Next(10);
-        }
-
+        Console.WriteLine($"{pownum} ");
+        return;
     }
-    return arr;
+    pownum = pownum * num;
+    pow--;
+    PowNum(num, pow, pownum);
 }
 
-void PrintArray(int[,] prarr)
-{
-    for (int i = 0; i < prarr.GetLength(0); i++)
-    {
-        for (int j = 0; j < prarr.GetLength(1); j++)
-        {
-            Console.Write(prarr[i,j] + " ");
-        }
-        Console.WriteLine();
-    }
-}
+PowNum(num, pow);

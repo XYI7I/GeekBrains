@@ -1,34 +1,17 @@
-﻿// . 
-Console.WriteLine("Программа ");
+﻿// 63. Задайте значение N. Напишите программу, которая выведет все натуральные числа в промежутке от 1 до N.
+Console.WriteLine("Программа выведет все натуральные числа в промежутке от 1 до N.");
 
-int[,] GenArray()
+
+Console.Write("Введите N промежутка от 1 до N: ");
+int n = int.Parse(Console.ReadLine ());
+
+void PrintNatNum(int n)
 {
-    Console.Write("Введите число строк массива m: ");
-    int m = int.Parse(Console.ReadLine ());
-    Console.Write("Введите число столбцов массива n: ");
-    int n = int.Parse(Console.ReadLine ());
-    int[,] arr = new int[m, n];
-    Random rand = new Random();
-
-    for (int i = 0; i < m; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-            arr[i, j] = rand.Next(10);
-        }
-
-    }
-    return arr;
+    if(n == 0)
+        return;
+    
+    PrintNatNum(n-1);
+    Console.Write($"{n} ");
 }
 
-void PrintArray(int[,] prarr)
-{
-    for (int i = 0; i < prarr.GetLength(0); i++)
-    {
-        for (int j = 0; j < prarr.GetLength(1); j++)
-        {
-            Console.Write(prarr[i,j] + " ");
-        }
-        Console.WriteLine();
-    }
-}
+PrintNatNum(n);

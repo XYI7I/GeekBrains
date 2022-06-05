@@ -1,34 +1,17 @@
-﻿// . 
-Console.WriteLine("Программа ");
+﻿// 67. Напишите программу, которая будет принимать на вход число и возвращать сумму его цифр. 
+Console.WriteLine("Программа принимает на вход число и возвращает сумму его цифр.");
 
-int[,] GenArray()
+Console.Write("Введите число: ");
+int num = int.Parse(Console.ReadLine ());
+
+void SumDigNum(int num, int sum = 0)
 {
-    Console.Write("Введите число строк массива m: ");
-    int m = int.Parse(Console.ReadLine ());
-    Console.Write("Введите число столбцов массива n: ");
-    int n = int.Parse(Console.ReadLine ());
-    int[,] arr = new int[m, n];
-    Random rand = new Random();
-
-    for (int i = 0; i < m; i++)
+    if(num/10 == 0)
     {
-        for (int j = 0; j < n; j++)
-        {
-            arr[i, j] = rand.Next(10);
-        }
-
+        Console.WriteLine($"Сумма цифр = {sum + num}");
+        return;
     }
-    return arr;
+    SumDigNum(num/10, sum + num%10);
 }
 
-void PrintArray(int[,] prarr)
-{
-    for (int i = 0; i < prarr.GetLength(0); i++)
-    {
-        for (int j = 0; j < prarr.GetLength(1); j++)
-        {
-            Console.Write(prarr[i,j] + " ");
-        }
-        Console.WriteLine();
-    }
-}
+SumDigNum(num);
