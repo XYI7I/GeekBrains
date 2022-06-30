@@ -31,12 +31,14 @@ def upsert_news(info):
     link_get = info.get('link')
     datetime_get = info.get('datetime')
     source_get = info.get('source')
+    url_get = info.get('url')
 
     key = {'title': title_get}
     data = {'$set':
                 {'link': link_get,
                  'datetime': datetime_get,
-                 'source': source_get}
+                 'source': source_get,
+                 'url': url_get}
             }
 
     with MongoClient(MONGO_HOST, MONGO_PORT) as client:
@@ -72,6 +74,7 @@ def get_info_from_lenta():
         info['link'] = url + new.xpath(link_xpath)[0]
         info['datetime'] = new.xpath(datetime_xpath)
         info['source'] = source
+        info['url'] = url
 
         upsert_news(info)
 
@@ -89,7 +92,7 @@ def get_info_from_yandex():
 
     items_xpath = '//div[contains(@class, "mg-grid__col")]/article[contains(@class, "mg-card")]'
 
-    title_xpath = './/h2/text()'
+    title_xpath = './/h2/a/text()'
     link_xpath = './/a//@href'
     datetime_xpath = './/span[contains(@class, "mg-card-source__time")]/text()'
     source = './/span[contains(@class, "mg-card-source__source")]//a/text()'
@@ -102,6 +105,7 @@ def get_info_from_yandex():
         info['link'] = new.xpath(link_xpath)[0]
         info['datetime'] = new.xpath(datetime_xpath)
         info['source'] = new.xpath(source)[0]
+        info['url'] = url
 
         upsert_news(info)
 
@@ -137,6 +141,7 @@ def get_info_from_mail():
         info_for_news = new_dom.xpath(new_items_xpath)
         info['datetime'] = info_for_news[0].xpath(datetime_xpath)[0]
         info['source'] = info_for_news[0].xpath(source)[0]
+        info['url'] = url
 
         upsert_news(info)
 
