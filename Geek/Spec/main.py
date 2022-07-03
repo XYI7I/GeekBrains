@@ -6,7 +6,7 @@
 
 string_array = ["hello", "2", "world", ":-)"]
 string_array_less3 = []
-answer = input('Хотите создать масив строк самостоятельно(Y/N)? ')
+answer = input('Хотите создать масив строк самостоятельно(Y)? ')
 
 if answer.upper() == 'Y':
     string_array = []
