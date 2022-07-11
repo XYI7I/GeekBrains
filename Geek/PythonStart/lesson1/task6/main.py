@@ -1,16 +1,9 @@
-# This is a sample Python script.
+"""
+Напишите программу:
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+- найти факториал числа
 
+- проверить число на простоту (т.е. что число делится только на 1 и само на себя)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+- найти наибольший простой делитель числа
+"""
