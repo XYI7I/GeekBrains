@@ -13,3 +13,14 @@ coorY = 0
 while coorX ==0  or coorY == 0:
     coorX = int(input('Введите координату X (X ≠ 0): '))
     coorY = int(input('Введите координату Y (Y ≠ 0): '))
+
+if coorX > 0:
+    if coorY > 0:
+        print('1')
+    else:
+        print('4')
+else:
+    if coorY > 0:
+        print('2')
+    else:
+        print('3')
