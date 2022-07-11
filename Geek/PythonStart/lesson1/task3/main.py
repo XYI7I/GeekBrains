@@ -7,20 +7,24 @@
 - x=2; y=4-> 1
 - x=-34; y=-30 -> 3
 """
+
+def findQuarter(x, y):
+    if x > 0 and y > 0:
+        numQ = 1
+    elif x < 0 and y > 0:
+        numQ = 2
+    elif x < 0 and y < 0:
+        numQ = 3
+    else:
+        numQ = 4
+
+    print(f"Точка находится в {numQ} - четверти плоскости")
+
 coorX = 0
 coorY = 0
 
-while coorX ==0  or coorY == 0:
+while coorX == 0 or coorY == 0:
     coorX = int(input('Введите координату X (X ≠ 0): '))
     coorY = int(input('Введите координату Y (Y ≠ 0): '))
 
-if coorX > 0:
-    if coorY > 0:
-        print('1')
-    else:
-        print('4')
-else:
-    if coorY > 0:
-        print('2')
-    else:
-        print('3')
+findQuarter(coorX, coorY)
