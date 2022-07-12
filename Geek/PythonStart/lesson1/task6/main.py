@@ -16,7 +16,7 @@ def findFact(n=-1):
     facn = 1
 
     for i in range(1, n):
-        facn = facn * i
+        facn = facn * (i + 1)
 
     print(f'Факториал числа {n} - {n}! = {facn}')
 
