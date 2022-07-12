@@ -9,7 +9,7 @@
 """
 
 
-def findFact(n = -1):
+def findFact(n=-1):
     """Поиск факториала"""
     while n < 0:
         n = int(input('введите n (n ≥ 0): '))
@@ -20,6 +20,7 @@ def findFact(n = -1):
 
     print(f'Факториал числа {n} - {n}! = {facn}')
 
+
 def findSimplNum():
     """Определение простое число или нет"""
     num = int(input('введите число: '))
@@ -28,6 +29,7 @@ def findSimplNum():
             print(f'Число {num} - не простое')
             return
     print(f'Число {num} - простое')
+
 
 def findLargDiv():
     """Определение простое число или нет"""
@@ -38,6 +40,7 @@ def findLargDiv():
             maxdiv = i
 
     print(f'Наибольший делитель числа {num} = {maxdiv}')
+
 
 findFact()
 findSimplNum()
