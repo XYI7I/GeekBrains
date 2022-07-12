@@ -24,7 +24,7 @@ def findFact(n=-1):
 def findSimplNum():
     """Определение простое число или нет"""
     num = int(input('введите число: '))
-    for i in range(2, num):
+    for i in range(2, abs(num)):
         if num % i == 0:
             print(f'Число {num} - не простое')
             return
@@ -35,7 +35,7 @@ def findLargDiv():
     """Определение простое число или нет"""
     num = int(input('введите число: '))
     maxdiv = 1
-    for i in range(2, num):
+    for i in range(2, abs(num)):
         if num % i == 0:
             maxdiv = i
 
