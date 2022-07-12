@@ -16,6 +16,6 @@ def findSumDigofNum():
         except:
             pass
     return num, SumDig
-num, sumdig = findSumDigofNum()
 
+num, sumdig = findSumDigofNum()
 print(f'Сумма цифр в числе {num} = {sumdig}')
