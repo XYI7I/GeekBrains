@@ -9,9 +9,8 @@
 """
 
 
-def findFact():
+def findFact(n = -1):
     """Поиск факториала"""
-    n = -1
     while n < 0:
         n = int(input('введите n (n ≥ 0): '))
     facn = 1
