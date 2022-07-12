@@ -18,7 +18,7 @@ def findFact(n):
     """Поиск факториала"""
     facn = 1
     for i in range(1, n):
-        facn = facn * i
+        facn = facn * (i + 1)
 
     return facn
 
