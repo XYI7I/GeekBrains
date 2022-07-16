@@ -6,6 +6,7 @@
 """
 num_fib = int(input('Задайте число, для составления списка чисел Фибоначчи, в том числе для отрицательных индексов: '))
 
+
 def list_fib(num_fib):
     """
     Функция составит список чисел Фибоначчи, в том числе для отрицательных индексов.
@@ -15,7 +16,13 @@ def list_fib(num_fib):
     :param num_fib: int
     """
 
-    fib_list = [0] * (2 * num_fib + 1)
+    fib_list = [1] * (2 * num_fib + 1)
+    fib_list[num_fib] = 0
+    for i in range(num_fib + 2, len(fib_list)):
+        fib_list[i] = fib_list[i - 1] + fib_list[i - 2]
+        fib_list[len(fib_list) - i - 1] = fib_list[i] * (-1) ** (i + 1)
+
     print(fib_list)
+
 
 list_fib(num_fib)
