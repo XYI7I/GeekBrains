@@ -23,4 +23,4 @@ def find_sum_el_odd_pos(list_num):
 
 
 find_sum = find_sum_el_odd_pos(list_num)
-print(find_sum)
+print(f' Сумма элементов на нечётных позициях списка {list_num} = {find_sum}')
