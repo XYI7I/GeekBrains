@@ -7,7 +7,12 @@
 - 0,56 -> 11
 
 """
-def findSumDigofNum():
+
+
+def find_sum_dig_of_num():
+    """
+    Функция находит сумму цифр заданного числа.
+    """
     num = input('Input number: ')
     SumDig = 0
     for el in range(len(num)):
@@ -17,5 +22,6 @@ def findSumDigofNum():
             pass
     return num, SumDig
 
-num, sumdig = findSumDigofNum()
-print(f'Сумма цифр в числе {num} = {sumdig}')
+
+num, sum_dig = find_sum_dig_of_num()
+print(f'Сумма цифр в числе {num} = {sum_dig}')
