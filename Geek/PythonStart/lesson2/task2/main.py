@@ -6,20 +6,28 @@
 - пусть N = 4, тогда [ 1, 2, 6, 24 ] (1, 1*2, 1*2*3, 1*2*3*4)
 """
 
-def listFactN():
+
+def list_fact_n():
+    """
+    Создаем список факториала
+    """
     N = int(input('Input N: '))
     listFactN = []
     for i in range(N):
-        listFactN.append(findFact(i + 1))
+        listFactN.append(find_fact(i + 1))
 
     print(listFactN)
 
-def findFact(n):
-    """Поиск факториала"""
-    facn = 1
+
+def find_fact(n):
+    """
+    Поиск факториала
+    """
+    fac_n = 1
     for i in range(1, n):
-        facn = facn * (i + 1)
+        fac_n = fac_n * (i + 1)
 
-    return facn
+    return fac_n
 
-listFactN()
+
+list_fact_n()
