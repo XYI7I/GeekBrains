@@ -5,21 +5,25 @@
 при d = 0.001, π = 3.141    10^{-10} ≤ d ≤ 10^{-1}
 
 """
+import math
 
-list_num = [2, 3, 5, 9, 3]
 
-
-def find_sum_el_odd_pos(list_num):
+def find_pi_acc(acc_range):
     """
-    Функция находит сумму элементов на нечетных позициях
+    Функция находит число π c заданной точностью d
 
-    :param list_num: - список из чисел
+    Пример: при d = 0.001, π = 3.141    10^{-10} ≤ d ≤ 10^{-1}
     """
-    sum_el = 0
-    for i in range(1, len(list_num), 2):
-        sum_el += list_num[i]
-    return sum_el
+    pi = 3
+    count = 1
+    while round(pi, acc_range + 1) != round(math.pi, acc_range + 1):
+        pi += (-1)**(count + 1) * 4 / (2 * count * (2 * count + 1) * (2 * count + 2))
+        count += 1
+
+    return round(pi, acc_range)
 
 
-find_sum = find_sum_el_odd_pos(list_num)
-print(f' Сумма элементов на нечётных позициях списка {list_num} = {find_sum}')
+acc_range = 10
+find_pi = find_pi_acc(acc_range)
+print(f'Число π c заданной точностью {acc_range} = {find_pi}')
+print(f'Число π = {round(math.pi, acc_range)}')
