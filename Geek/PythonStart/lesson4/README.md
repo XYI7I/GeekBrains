@@ -4,7 +4,7 @@
 > [Задача 1](https://github.com/XYI7I/GeekBrains/tree/main/Geek/PythonStart/lesson4/task1/main.py): Вычислить число $\pi$ π c заданной точностью d 
 
     Пример:
-    - при $d = 0.001, π = 3.141$    $10^{-1} ≤ d ≤10^{-10}$
+    - при d = 0.001, π = 3.141    $10^{-10}$ ≤ d ≤ $10^{-1}$
     
 > [Задача 2](https://github.com/XYI7I/GeekBrains/tree/main/Geek/PythonStart/lesson4/task2/main.py): Задайте натуральное число N. Напишите программу, которая составит список простых множителей числа N.
     
