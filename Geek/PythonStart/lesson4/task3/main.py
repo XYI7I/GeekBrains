@@ -2,6 +2,9 @@
 Задайте последовательность чисел. Напишите программу, которая выведет список неповторяющихся элементов исходной последовательности.
 
 """
+from random import randint
+
+
 def make_list_num_n_elem(N):
     """
     Функция создает список из n - случайных элементов промежутка [-N, N].
@@ -25,6 +28,11 @@ def make_not_rep_list(list):
 
     return
 
+
 A = [10, 10, 23, 10, 123, 66, 78, 123]
 
 make_not_rep_list(A)
+
+list1 = make_list_num_n_elem(50)
+print(list1)
+make_not_rep_list(list1)
