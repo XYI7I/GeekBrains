@@ -12,22 +12,19 @@ def make_list_num_n_elem(N):
     return listNum
 
 
-def find_pi_acc(acc_range):
+def make_not_rep_list(list):
     """
-    Функция находит число π c заданной точностью d
-
-    Пример: при d = 0.001, π = 3.141    10^{-10} ≤ d ≤ 10^{-1}
+    Функция которая выведет список неповторяющихся элементов исходной последовательности.
     """
-    pi = 3
-    count = 1
-    while round(pi, acc_range + 1) != round(math.pi, acc_range + 1):
-        pi += (-1)**(count + 1) * 4 / (2 * count * (2 * count + 1) * (2 * count + 2))
-        count += 1
 
-    return round(pi, acc_range)
+    for elem in list:
+        if list.count(elem) > 1:
+            list.remove(elem)
 
+    print(list)
 
-acc_range = 10
-find_pi = find_pi_acc(acc_range)
-print(f'Число π c заданной точностью {acc_range} = {find_pi}')
-print(f'Число π = {round(math.pi, acc_range)}')
+    return
+
+A = [10, 10, 23, 10, 123, 66, 78, 123]
+
+make_not_rep_list(A)
