@@ -5,3 +5,13 @@
 Иванов 23543.12
 Петров 13749.32
 """
+
+import pandas as pd
+
+df = pd.read_csv('staff.csv')
+# print(df.loc[df['salary'] < 20000.00])
+# df_20 = df.loc[df['salary'] < 20000]
+mean_sal = round(df['salary'].mean(), 2)
+df_less20 = df.loc[df['salary'] < 20000]
+print(f'Средняя величина дохода сотрудниковmean = {mean_sal}')
+print(f'Ссписок сотрудников, которые имееют оклад менее 20 тысяч --> \n {df_less20}')
