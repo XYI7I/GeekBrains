@@ -10,6 +10,7 @@ def find_lose_num(file_name):
     """
     file = open(file_name, 'r')
     numbers = file.read().split()
+    file.close()
     for i in range(0, len(numbers) - 1) :
         if int(numbers[i + 1]) - int(numbers[i]) != 1:
             fnum = int(numbers[i]) + 1
