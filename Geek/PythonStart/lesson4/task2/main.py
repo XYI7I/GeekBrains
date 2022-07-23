@@ -22,7 +22,12 @@ def simpl_num_list(num):
     """
     Определение простое число или нет
     """
-    file = open('simp_num.txt', 'r')
+    try:
+        file = open('simp_num.txt', 'r')
+    except:
+        file = open('simp_num.txt', 'w+').write("1 2 3")
+        file = open('simp_num.txt', 'r')
+
     simp_numbers = file.read().split()
     file.close()
     last_el = int(simp_numbers[len(simp_numbers) - 1])
@@ -30,7 +35,7 @@ def simpl_num_list(num):
         for i in range(last_el + 1, abs(num) + 1):
             sim_num = find_simpl_num(i)
             if sim_num is not None:
-                file = open('simp_num.txt', 'a')
+                file = open('simp_num.txt', 'a+')
                 file.write(" " + str(sim_num))
                 file.close()
 
@@ -42,4 +47,5 @@ def find_simpl_num(num):
             return
     return num
 
-find_list_simpl_div(-18)
+simpl_num_list(15)
+# find_list_simpl_div(-18)
