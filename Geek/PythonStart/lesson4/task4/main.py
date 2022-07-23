@@ -35,11 +35,11 @@ def create_polyvalent_file_k(k):
     file = open('polyvalent_str', 'a+')
     j = 0
     for i in range(0, k + 1):
-        koeff = randint(0, 3)
+        koeff = randint(0, 100)
         print(koeff)
         if koeff == 0:
             j += 1
-            if j == k and koeff != 0:
+            if j == k and i != k:
                 return
             else:
                 pass
