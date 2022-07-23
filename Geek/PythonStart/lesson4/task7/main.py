@@ -13,8 +13,9 @@ def find_lose_num(file_name):
     for i in range(0, len(numbers) - 1) :
         if int(numbers[i + 1]) - int(numbers[i]) != 1:
             fnum = int(numbers[i]) + 1
+            return fnum
         i += 1
-    return fnum
+
 
 
 fnum = find_lose_num('number.txt')
