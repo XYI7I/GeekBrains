@@ -1,25 +1,27 @@
 """
 Даны два файла, в каждом из которых находится запись многочлена. Задача - сформировать файл, содержащий сумму многочленов.
 """
-import math
 
 
-def find_pi_acc(acc_range):
+def create_sum_polyvalent():
     """
-    Функция находит число π c заданной точностью d
+    Функция создает многочелен степени k и записывает его в фаил
+    значения коэффициентов случайны от 0 до 100)
 
-    Пример: при d = 0.001, π = 3.141    10^{-10} ≤ d ≤ 10^{-1}
+    Пример:
+    - k=2 => 2*x² + 4*x + 5 = 0 или x² + 5 = 0 или 10*x² = 0
     """
-    pi = 3
-    count = 1
-    while round(pi, acc_range + 1) != round(math.pi, acc_range + 1):
-        pi += (-1)**(count + 1) * 4 / (2 * count * (2 * count + 1) * (2 * count + 2))
-        count += 1
-
-    return round(pi, acc_range)
+    print('+')
 
 
-acc_range = 10
-find_pi = find_pi_acc(acc_range)
-print(f'Число π c заданной точностью {acc_range} = {find_pi}')
-print(f'Число π = {round(math.pi, acc_range)}')
+def array_from_file(name):
+    koeff_arr = []
+    file = open(name, 'r')
+    lines = file.readlines()
+    for line in lines:
+        koeff_arr.append(line.split(' '))
+        file.close()
+
+    return koeff_arra
+
+
