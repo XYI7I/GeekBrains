@@ -9,12 +9,15 @@ def find_list_simpl_div(n):
     Функция составит список простых множителей числа N
     """
     simpl_num_list(abs(n))
+    list_div_n =[]
     file = open('simp_num', 'r')
     div_simp = file.read().split()
     file.close()
     for el in div_simp:
         if n % int(el) == 0:
-            print(el)
+            list_div_n.append(el)
+
+    print(f'Cписок простых множителей числа {n} --> {list_div_n}')
 
 
 
@@ -47,5 +50,4 @@ def find_simpl_num(num):
             return
     return num
 
-simpl_num_list(15)
-# find_list_simpl_div(-18)
+find_list_simpl_div(1008)
