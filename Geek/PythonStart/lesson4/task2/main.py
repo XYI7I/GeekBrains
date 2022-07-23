@@ -8,7 +8,7 @@ def find_list_simpl_div(n):
     """
     Функция составит список простых множителей числа N
     """
-    simpl_num_list(n)
+    simpl_num_list(abs(n))
     file = open('simp_num.txt', 'r')
     div_simp = file.read().split()
     file.close()
@@ -42,4 +42,4 @@ def find_simpl_num(num):
             return
     return num
 
-find_list_simpl_div(21)
+find_list_simpl_div(-18)
