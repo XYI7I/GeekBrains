@@ -1,5 +1,5 @@
 # Знакомство с языком Python (семинары)
-## Урок 4. Данные, функции и модули в Python. Продолжение
+## Урок 5. Ускоренная обработка данных: lambda, filter, map, zip, enumerate, list comprehension
 
 > [Задача 1](https://github.com/XYI7I/GeekBrains/tree/main/Geek/PythonStart/lesson5/task1/main.py): Напишите программу, удаляющую из текста все слова, содержащие ""абв"". 
 
