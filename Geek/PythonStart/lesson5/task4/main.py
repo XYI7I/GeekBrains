@@ -35,6 +35,6 @@ def decode_rle(rle_data):
 
 text_data = 'Реализуйте RLE алгоритм: реализуйте модуль сжатия и восстановления данных'
 print(encode_rle(text_data))
-rle_data = encode_rle(text_data)
 
+rle_data = encode_rle(text_data)
 print(decode_rle(rle_data))
