@@ -14,16 +14,16 @@ def win_game(mas, sign):
         diag.append(mas[i][i])
         diag1.append(mas[2 - i][i])
         if diag.count(sign) == 3 or diag1.count(sign) == 3:
-            return 'win' + sign
+            return sign + ' win'
     for row in mas:
         count_zer += row.count(0)
         if row.count(sign) == 3:
-            return 'win ' + sign
+            return sign + ' win'
     for col in range(3):
-        if mas[:][col] == sign:
-            return 'win ' + sign
+        if [x[col] for x in mas].count(sign) == 3:
+            return sign + ' win'
     if count_zer == 0:
-        return 'Piece'
+        return 'Piece \n for restart press SPACE'
     return False
 
 
@@ -40,12 +40,12 @@ blue = (0, 0, 255)
 green = (0, 255, 0)
 white = (255, 255, 255)
 count = 0
-
+game_over = False
 mas = [[0] * 3 for i in range(3)]
 
 while True:
     for event in pygame.event.get():
-        if event.type == pygame.QUIT and not game_over:
+        if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit(0)
         elif event.type == pygame.MOUSEBUTTONDOWN:
@@ -60,6 +60,11 @@ while True:
                 else:
                     mas[row][col] = 'O'
                 count += 1
+        elif event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
+            game_over = False
+            count = 0
+            mas = [[0] * 3 for i in range(3)]
+            screen.fill(black)
 
     if not game_over:
         for row in range(3):
@@ -80,7 +85,8 @@ while True:
                     pygame.draw.line(screen, green, (x + size_block / 4, y + size_block * 3 / 4),
                                      (x + size_block * 3 / 4, y + size_block / 4), 10)
                 elif mas[row][col] == 'O':
-                    pygame.draw.circle(screen, blue, (x + size_block / 2, y + size_block / 2), size_block * 1.27 / 4, 10)
+                    pygame.draw.circle(screen, blue, (x + size_block / 2, y + size_block / 2), size_block * 1.27 / 4,
+                                       10)
 
     if (count - 1) % 2 == 0:
         game_over = win_game(mas, 'X')
@@ -95,5 +101,11 @@ while True:
         text_x = screen.get_width() / 2 - test_rect.width / 2
         text_y = screen.get_height() / 2 - test_rect.height / 2
         screen.blit(text1, [text_x, text_y])
+        font = pygame.font.SysFont('Monserrat', 35)
+        text2 = font.render('Press SPACE for Restart!', True, white)
+        test_rect = text2.get_rect()
+        text_x = screen.get_width() / 2 - test_rect.width / 2
+        text_y = screen.get_height() / 2 + test_rect.height * 2
+        screen.blit(text2, [text_x, text_y])
 
     pygame.display.update()
