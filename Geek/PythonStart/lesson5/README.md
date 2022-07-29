@@ -11,7 +11,7 @@
     
     b) Подумайте как наделить бота ""интеллектом""
     
-> [Задача 3](https://github.com/XYI7I/GeekBrains/tree/main/Geek/PythonStart/lesson5/task3/main.py): Создайте программу для игры в ""Крестики-нолики""
+> [Задача 3](https://github.com/XYI7I/GeekBrains/tree/main/Geek/PythonStart/lesson5/task3/main.py): Создайте программу для игры в "Крестики-нолики"
 
 > [Задача 4](https://github.com/XYI7I/GeekBrains/tree/main/Geek/PythonStart/lesson5/task4/main.py): Реализуйте RLE алгоритм: реализуйте модуль сжатия и восстановления данных.
  
