@@ -1,21 +1,17 @@
 """
-В файле находится N натуральных чисел, записанных через пробел. Среди чисел не хватает одного, чтобы выполнялось условие A[i] - 1 = A[i-1]. Найдите это число.
+Напишите программу, удаляющую из текста все слова, содержащие ""абв"".
 
 
 """
-
-def find_lose_num(file_name):
+text = 'Я не сошел с ума все объясню от а до я Мой рэп убирает сильнее C2H5OH. Это просто как 2×2 абв Это просто как 2×2 абв Это просто как 2×2 абв Это просто как 2×2 абв VIP такого нет по Mtv Это жарче чем dvd xxx Круче группы USB и RNB'
+def remove_seq_of_char(text):
     """
-    Функция находит пропущеное число в списке условие A[i] - 1 = A[i-1].
+    Функция удаляющую из текста все слова, содержащие ""абв""
     """
-    file = open(file_name, 'r')
-    numbers = file.read().split()
-    for i in range(0, len(numbers) - 1) :
-        if int(numbers[i + 1]) - int(numbers[i]) != 1:
-            fnum = int(numbers[i]) + 1
-        i += 1
-    return fnum
+    res_text = text.replace('абв', '')
+
+    return res_text
 
 
-fnum = find_lose_num('number.txt')
-print(fnum)
+text2 = remove_seq_of_char(text)
+print(text2)
