@@ -99,24 +99,7 @@ print(result)
 '''
 
 
-def find_uniq_el(list):
-    max_elem = max(list) + 1
-    count = [0] * max_elem
 
-    for element in list:
-        count[element] += 1
-
-    result = []
-    for element in list:
-        if count[element] == 1:
-            result.append(element)
-    return result
-
-
-list_num = [1, 2, 3, 5, 1, 5, 3, 10]
-print(list_num)
-list_unq = find_uniq_el(list_num)
-print(list_unq)
 
 """
 import re
