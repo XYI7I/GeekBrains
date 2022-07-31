@@ -1,5 +1,5 @@
 # Знакомство с языком Python (семинары)
-## Урок 5. Ускоренная обработка данных: lambda, filter, map, zip, enumerate, list comprehension
+## Урок 6. Ускоренная обработка данных: lambda, filter, map, zip, enumerate, list comprehension. Продолжение
 
 > [Задача 1](https://github.com/XYI7I/GeekBrains/tree/main/Geek/PythonStart/lesson6/task1/main.py): Напишите программу вычисления арифметического выражения заданного строкой. Используйте операции +,-,/,*. приоритет операций стандартный.
 
