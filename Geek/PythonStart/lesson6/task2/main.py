@@ -44,4 +44,7 @@ print(list_unq1)
 sum_el = sum([el for el in list_num[::2]])
 print(f'Сумма чисел списка {list_num} стоящих на нечетной позициях = {sum_el}')
 
-dict(zip(names, ages))
+list2 = [el*3 + 1 for el in range(1, 7)]
+
+dict_list = dict(zip([el for el in range(1, 7)], list2))
+print(dict_list)
