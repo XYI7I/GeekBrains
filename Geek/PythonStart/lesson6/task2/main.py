@@ -26,7 +26,14 @@ def find_uniq_el(list):
     return result
 
 
+
+
 list_num = [1, 2, 3, 5, 1, 5, 3, 10]
+list_unq1 = [el for el in list_num if list_num.count(el) == 1]
 print(list_num)
 list_unq = find_uniq_el(list_num)
 print(list_unq)
+print(list_unq1)
+
+
+
