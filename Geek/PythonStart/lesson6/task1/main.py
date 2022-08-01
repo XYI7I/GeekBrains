@@ -14,31 +14,60 @@
         *Пример:*
 
         1+2*3
-         => 7;
+         => 7;a
 
         (1+2)*3 => 9;
 
 """
+str_equation = '2+(1+(2*3))/(4-10)'
+
+# print(str_equation[str_equation.rindex('(') + 1:][:str_equation[str_equation.rindex('(') + 1:].index(')')])
+print(str_equation[:str_equation.rindex('(')] + '-6' + str_equation[str_equation.rindex('('):][str_equation.index(')'):])
+
+print(eval('2+(1+(2*3))/(4-10)'))
 
 
 def find_res_from_str(str_equation):
+    """
+    """
+    global result_eq
     list_opr = ['+', '-', '*', '/']
     list_var = []
     str_var = ''
-    for el in str_equation:
-        if el not in list_opr:
-            str_var += el
-        else:
-            list_var.append(int(str_var))
-            str_var = ''
-            list_var.append(el)
-    list_var.append(int(str_var))
-    print(eval(str_equation))
-    result = make_arif_solution(list_var)
-    return result
+    # print(eval(str_equation))
+    count_op = str_equation.count('(')
+    count_cl = str_equation.count(')')
+
+    if count_op == count_cl == 0:
+        for el in str_equation:
+            if el not in list_opr:
+                str_var += el
+            else:
+                list_var.append(int(str_var))
+                str_var = ''
+                list_var.append(el)
+        list_var.append(int(str_var))
+        result_eq = make_arif_solution(list_var)
+
+
+    elif count_op != count_cl:
+        print('Error!')
+        exit()
+
+    else:
+        print(str_equation[str_equation.rindex('(') + 1:][:str_equation[str_equation.rindex('(') + 1:].index(')')])
+        result_str = str(find_res_from_str(str_equation[str_equation.rindex('(') + 1:][:str_equation[str_equation.rindex('(') + 1:].rindex(')')]))
+
+        str_equation1 = str_equation[:str_equation.rindex('(')] + result_str + str_equation[str_equation.rindex('('):][str_equation.index(')'):]
+        print(str_equation1)
+        find_res_from_str(str_equation1)
+
+    return result_eq
 
 
 def make_arif_solution(list_var):
+    """
+    """
     i = 0
     result_equ = 0
 
@@ -59,7 +88,7 @@ def make_arif_solution(list_var):
             result_equ = 0
         else:
             i += 1
-    print(list_var)
+    # print(list_var)
 
     while ('+' in list_var) or ('-' in list_var):
 
@@ -81,52 +110,10 @@ def make_arif_solution(list_var):
 
     result_equ = list_var[0]
 
-    print(list_var)
+    # print(list_var)
 
     return result_equ
 
 
-result = find_res_from_str('1+2*3/4-10')
+result = find_res_from_str('2+(1+(2*3))/(4-10)')
 print(result)
-
-'''
-Дана последовательность чисел. Получить список уникальных элементов заданной последовательности.
-
-*Пример:* 
-
-[1, 2, 3, 5, 1, 5, 3, 10] => [2, 10]
-
-'''
-
-
-
-
-"""
-import re
-
-actions = {
-    "^": lambda x, y: str(float(x) ** float(y)),
-    "*": lambda x, y: str(float(x) * float(y)),
-    "/": lambda x, y: str(float(x) / float(y)),
-    "+": lambda x, y: str(float(x) + float(y)),
-    "-": lambda x, y: str(float(x) - float(y))
-}
-
-priority_reg_exp = r"\((.+?)\)"
-action_reg_exp = r"(-?\d+(?:\.\d+)?)\s*\{}\s*(-?\d+(?:\.\d+)?)"
-
-
-def my_eval(expresion: str) -> str:
-    while (match := re.search(priority_reg_exp, expresion)):
-        expresion: str = expresion.replace(match.group(0), my_eval(match.group(1)))
-
-    for symbol, action in actions.items():
-        while (match := re.search(action_reg_exp.format(symbol), expresion)):
-            expresion: str = expresion.replace(match.group(0), action(*match.groups()))
-
-    return expresion
-
-exp = "".join(input('Введите строковое выражение: ').split())
-print(my_eval(exp), eval(exp))
-
-"""
