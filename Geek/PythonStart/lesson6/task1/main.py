@@ -40,15 +40,16 @@ def find_res_from_str(str_equation):
         result_str = str(find_res_from_str(str_equation[str_equation.rindex('(') + 1:str_equation.index(')')]))
         str_equation = str_equation[:str_equation.rindex('(')]+result_str+str_equation[str_equation.index(')')+1:]
         find_res_from_str(str_equation)
+    else:
+        for el in str_equation:
+            if el not in list_opr:
+                str_var += el
+            else:
+                list_var.append(int(str_var))
+                str_var = ''
+                list_var.append(el)
+        list_var.append(int(str_var))
 
-    for el in str_equation:
-        if el not in list_opr:
-            str_var += el
-        else:
-            list_var.append(int(str_var))
-            str_var = ''
-            list_var.append(el)
-    list_var.append(int(str_var))
     result_eq = make_arif_solution(list_var)
     return result_eq
 
