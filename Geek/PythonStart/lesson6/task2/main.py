@@ -47,4 +47,4 @@ print(f'Сумма чисел списка {list_num} стоящих на неч
 list2 = [el*3 + 1 for el in range(1, 7)]
 
 dict_list = dict(zip([el for el in range(1, 7)], list2))
-print(dict_list)
+print(f'Словарь индекс-значение, состоящий из элементов последовательности 3n + 1: \n{dict_list}')
