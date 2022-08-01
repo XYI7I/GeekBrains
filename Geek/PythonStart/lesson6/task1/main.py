@@ -19,11 +19,7 @@
         (1+2)*3 => 9;
 
 """
-# b = '(1+(2*3)/4)-10'
-# b[b.rindex('(') + 1:b.index(')')]
-# print(b[b.rindex('(') + 1:b.index(')')])
-# print(b[:b.rindex('(')]+'12'+b[b.index(')')+1:])
-
+print(eval('2+(1+(2*3))/4-10'))
 
 def find_res_from_str(str_equation):
     """
@@ -36,9 +32,10 @@ def find_res_from_str(str_equation):
     count_cl = str_equation.count(')')
     if count_op != count_cl:
         return print('Error!')
-    if count_op != 0:
+    elif count_op != 0:
         result_str = str(find_res_from_str(str_equation[str_equation.rindex('(') + 1:str_equation.index(')')]))
         str_equation = str_equation[:str_equation.rindex('(')]+result_str+str_equation[str_equation.index(')')+1:]
+        # print(str_equation)
         find_res_from_str(str_equation)
     else:
         for el in str_equation:
@@ -50,8 +47,8 @@ def find_res_from_str(str_equation):
                 list_var.append(el)
         list_var.append(int(str_var))
 
-    result_eq = make_arif_solution(list_var)
-    return result_eq
+        result_eq = make_arif_solution(list_var)
+        return result_eq
 
 
 def make_arif_solution(list_var):
@@ -77,7 +74,7 @@ def make_arif_solution(list_var):
             result_equ = 0
         else:
             i += 1
-    print(list_var)
+    # print(list_var)
 
     while ('+' in list_var) or ('-' in list_var):
 
