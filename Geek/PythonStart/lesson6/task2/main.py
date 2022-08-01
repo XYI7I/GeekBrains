@@ -43,3 +43,5 @@ print(list_unq1)
 # Найти сумму чисел списка стоящих на нечетной позиции
 sum_el = sum([el for el in list_num[::2]])
 print(f'Сумма чисел списка {list_num} стоящих на нечетной позициях = {sum_el}')
+
+dict(zip(names, ages))
