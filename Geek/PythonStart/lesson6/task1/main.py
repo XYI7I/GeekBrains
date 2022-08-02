@@ -47,23 +47,26 @@ def find_res_from_str(str_equation):
             if el not in list_opr:
                 str_var += el
             else:
-                list_var.append(int(str_var))
-                str_var = ''
-                list_var.append(el)
+                if el == '-' and str_equation[str_equation.index(el)-1] in list_opr:
+                    str_var += el
+                else:
+                    list_var.append(int(str_var))
+                    str_var = ''
+                    list_var.append(el)
         list_var.append(int(str_var))
         result_eq = make_arif_solution(list_var)
 
 
     elif count_op != count_cl:
-        print(str_equation)
+        # print(str_equation)
         print('Error!')
         exit()
 
     else:
-        print(str_equation[str_equation.rindex('(') + 1:][:str_equation[str_equation.rindex('(') + 1:].index(')')])
+        # print(str_equation[str_equation.rindex('(') + 1:][:str_equation[str_equation.rindex('(') + 1:].index(')')])
         result_str = str(find_res_from_str(str_equation[str_equation.rindex('(') + 1:][:str_equation[str_equation.rindex('(') + 1:].index(')')]))
         str_equation_temp = str_equation[:str_equation.rindex('(')] + result_str + str_equation[str_equation.rindex('('):][str_equation[str_equation.rindex('('):].index(')')+1:]
-        print(str_equation_temp)
+        # print(str_equation_temp)
         find_res_from_str(str_equation_temp)
 
     return result_eq
@@ -92,7 +95,7 @@ def make_arif_solution(list_var):
             result_equ = 0
         else:
             i += 1
-    print(list_var)
+    # print(list_var)
 
     while ('+' in list_var) or ('-' in list_var):
 
