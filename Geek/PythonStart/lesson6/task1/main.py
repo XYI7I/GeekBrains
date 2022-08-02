@@ -22,7 +22,11 @@
 str_equation = '2+(1+(2*3))/(4-10)'
 
 # print(str_equation[str_equation.rindex('(') + 1:][:str_equation[str_equation.rindex('(') + 1:].index(')')])
-print(str_equation[:str_equation.rindex('(')] + '-6' + str_equation[str_equation.rindex('('):][str_equation.index(')'):])
+print(str_equation[:str_equation.rindex('(')])
+str_equation1 = str_equation[str_equation.rindex('('):]
+print(str_equation[str_equation.rindex('('):])
+print(str_equation[str_equation.rindex('('):][:str_equation[str_equation.rindex('('):].index(')')+1])
+
 
 print(eval('2+(1+(2*3))/(4-10)'))
 
@@ -51,16 +55,16 @@ def find_res_from_str(str_equation):
 
 
     elif count_op != count_cl:
+        print(str_equation)
         print('Error!')
         exit()
 
     else:
         print(str_equation[str_equation.rindex('(') + 1:][:str_equation[str_equation.rindex('(') + 1:].index(')')])
-        result_str = str(find_res_from_str(str_equation[str_equation.rindex('(') + 1:][:str_equation[str_equation.rindex('(') + 1:].rindex(')')]))
-
-        str_equation1 = str_equation[:str_equation.rindex('(')] + result_str + str_equation[str_equation.rindex('('):][str_equation.index(')'):]
-        print(str_equation1)
-        find_res_from_str(str_equation1)
+        result_str = str(find_res_from_str(str_equation[str_equation.rindex('(') + 1:][:str_equation[str_equation.rindex('(') + 1:].index(')')]))
+        str_equation_temp = str_equation[:str_equation.rindex('(')] + result_str + str_equation[str_equation.rindex('('):][str_equation[str_equation.rindex('('):].index(')')+1:]
+        print(str_equation_temp)
+        find_res_from_str(str_equation_temp)
 
     return result_eq
 
@@ -88,7 +92,7 @@ def make_arif_solution(list_var):
             result_equ = 0
         else:
             i += 1
-    # print(list_var)
+    print(list_var)
 
     while ('+' in list_var) or ('-' in list_var):
 
