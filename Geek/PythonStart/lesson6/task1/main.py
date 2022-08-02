@@ -47,7 +47,7 @@ def find_res_from_str(str_equation):
             if el not in list_opr:
                 str_var += el
             else:
-                if el == '-' and str_equation[str_equation.index(el)-1] in list_opr:
+                if el == '-' and str_equation[str_equation.index(el)-1] in list_opr or str_equation.index(el) == 0:
                     str_var += el
                 else:
                     list_var.append(int(str_var))
@@ -123,4 +123,9 @@ def make_arif_solution(list_var):
 
 
 result = find_res_from_str('2+(1+(2*3))/(4-10)')
+
 print(result)
+print(eval('2+(1+(2*3))/(4-10)*(-1)'))
+result = find_res_from_str('2+(1+(2*3))/(4-10)*(-1)')
+print(result)
+
