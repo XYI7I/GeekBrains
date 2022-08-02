@@ -19,16 +19,6 @@
         (1+2)*3 => 9;
 
 """
-# str_equation = '2+(1+(2*3))/(4-10)'
-
-# print(str_equation[str_equation.rindex('(') + 1:][:str_equation[str_equation.rindex('(') + 1:].index(')')])
-# print(str_equation[:str_equation.rindex('(')])
-# str_equation1 = str_equation[str_equation.rindex('('):]
-# print(str_equation[str_equation.rindex('('):])
-# print(str_equation[str_equation.rindex('('):][:str_equation[str_equation.rindex('('):].index(')')+1])
-
-
-print(eval('2+(1+(2*3))/(4-10)'))
 
 
 def find_res_from_str(str_equation):
@@ -47,7 +37,7 @@ def find_res_from_str(str_equation):
             if el not in list_opr:
                 str_var += el
             else:
-                if el == '-' and str_equation[str_equation.index(el)-1] in list_opr or str_equation.index(el) == 0:
+                if el == '-' and str_equation[str_equation.index(el) - 1] in list_opr or str_equation.index(el) == 0:
                     str_var += el
                 else:
                     list_var.append(int(str_var))
@@ -64,8 +54,13 @@ def find_res_from_str(str_equation):
 
     else:
         # print(str_equation[str_equation.rindex('(') + 1:][:str_equation[str_equation.rindex('(') + 1:].index(')')])
-        result_str = str(find_res_from_str(str_equation[str_equation.rindex('(') + 1:][:str_equation[str_equation.rindex('(') + 1:].index(')')]))
-        str_equation_temp = str_equation[:str_equation.rindex('(')] + result_str + str_equation[str_equation.rindex('('):][str_equation[str_equation.rindex('('):].index(')')+1:]
+        result_str = str(find_res_from_str(
+            str_equation[str_equation.rindex('(') + 1:][:str_equation[str_equation.rindex('(') + 1:].index(')')]))
+        str_equation_temp = str_equation[:str_equation.rindex('(')] + result_str + str_equation[
+                                                                                   str_equation.rindex('('):][
+                                                                                   str_equation[
+                                                                                   str_equation.rindex('('):].index(
+                                                                                       ')') + 1:]
         # print(str_equation_temp)
         find_res_from_str(str_equation_temp)
 
@@ -122,10 +117,12 @@ def make_arif_solution(list_var):
     return result_equ
 
 
-result = find_res_from_str('2+(1+(2*3))/(4-10)')
+print(eval('2+(1+(2*3))/(4-10)'))
 
+result = find_res_from_str('2+(1+(2*3))/(4-10)')
 print(result)
+
 print(eval('2+(1+(2*3))/(4-10)*(-1)'))
+
 result = find_res_from_str('2+(1+(2*3))/(4-10)*(-1)')
 print(result)
-
