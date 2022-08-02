@@ -19,13 +19,13 @@
         (1+2)*3 => 9;
 
 """
-str_equation = '2+(1+(2*3))/(4-10)'
+# str_equation = '2+(1+(2*3))/(4-10)'
 
 # print(str_equation[str_equation.rindex('(') + 1:][:str_equation[str_equation.rindex('(') + 1:].index(')')])
-print(str_equation[:str_equation.rindex('(')])
-str_equation1 = str_equation[str_equation.rindex('('):]
-print(str_equation[str_equation.rindex('('):])
-print(str_equation[str_equation.rindex('('):][:str_equation[str_equation.rindex('('):].index(')')+1])
+# print(str_equation[:str_equation.rindex('(')])
+# str_equation1 = str_equation[str_equation.rindex('('):]
+# print(str_equation[str_equation.rindex('('):])
+# print(str_equation[str_equation.rindex('('):][:str_equation[str_equation.rindex('('):].index(')')+1])
 
 
 print(eval('2+(1+(2*3))/(4-10)'))
