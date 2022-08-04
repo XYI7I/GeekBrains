@@ -20,7 +20,7 @@ query = randint(1, 7) % 2
 turn_candy = 28
 
 while candy > 28:
-    # print(randint(1,3))
+
     if query == 0:
         print('The first player\'s turn')
         query += 1
@@ -28,13 +28,11 @@ while candy > 28:
         while turn_candy > 28 or turn_candy < 1:
             turn_candy = int(input('take candies in range(1:28) - '))
     else:
-        # print(candy//28, candy//29)
+
         if 29 < candy < 58:
             turn_candy = candy - 29
         elif candy > 29 * (candy // 29):
-            # print(candy, 29*(candy//29))
             turn_candy = candy - 29 * (candy // 29)
-        # print('1')
         elif candy < 29 * (candy // 29):
             turn_candy = candy - 29 * (candy // 28 - 1)
         elif candy == 58:
@@ -52,5 +50,3 @@ if query == 0:
     print('You win the leather bag of bones!')
 else:
     print('The bot player win!')
-
-
