@@ -33,7 +33,7 @@ while candy > 28:
         elif candy < 29 * (candy // 29):
             turn_candy = candy - 29 * (candy // 28 - 1)
         elif candy == 58:
-            print('You win leather bag!')
+            print('You win the leather bag of bones!')
             exit()
         else:
             turn_candy = randint(1, 28)
@@ -44,7 +44,7 @@ while candy > 28:
     print(f"{candy} - candies left.")
 
 if query == 0:
-    print('You win leather bag!')
+    print('You win the leather bag of bones!')
 else:
     print('The bot player win!')
 
