@@ -17,3 +17,9 @@
 Предполагается возможность вывода всех контактов, поиска контакта по имени, добавления и удаления ко
 
 """
+
+import pandas as pd
+
+df = pd.read_csv('data.csv', ';', encoding='windows-1251')
+
+print(df.loc[df['name'] == 'Имя_1']['phone'])
