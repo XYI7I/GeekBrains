@@ -63,6 +63,7 @@ def convert_to_txt(data_frame):
     print('test')
 
 
+
 df = pd.read_csv('data.csv', ';', encoding='windows-1251')
 data_val = df.loc[df['name'] == 'Имя_1']['phone']
 print(data_val)
