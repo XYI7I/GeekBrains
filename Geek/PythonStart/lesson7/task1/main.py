@@ -21,53 +21,29 @@
 import pandas as pd
 
 
-def dataframe_from_readline_file(file_name, numofvar, encod='utf-8'):
-    """
-    :param file_name: path of data file - string: 'folder_name/file_name'
-    :param numofvar:
-    """
-    file = open(file_name, 'r', encoding=encod)
-    list_of_data = []
-    lines = file.readlines()
-    file.close()
-    for line in lines:
-        list_of_data.append(line.strip())
-    # print(list_of_data)
-    dict_df = {}
-    for i in range(numofvar):
-        key = input('Input name of value: ')
-        dict_df[key] = list_of_data[i::numofvar]
-
-    # print(dict_df)
-    data_frame = pd.DataFrame.from_dict(dict_df)
-    return data_frame
-
-
-def add_data_df(data_frame):
+def dataframe_from_readline_file(filename, encod='windows-1251'):
     """
 
-    :param data_frame:
+    :param filename: path of data file - string: 'folder_name/file_name'
+    :param encod: encoding format of data file - string: 'windows-1251', 'utf-8' e.t.c
     """
-    list = []
-    for i in range(len(data_frame.columns)):
-        list.append(input(f'Input {data_frame.columns[i]}: '))
-    data_frame.loc[len(data_frame)] = list
-    print(data_frame)
+    file = open(filename, 'r', encoding=encod)
 
+    while True:
+        # считываем строку
+        line = file.readline()
+        # прерываем цикл, если строка пустая
+        if not line:
+            break
+        # выводим строку
+        print(line.strip())
 
-def convert_to_txt(data_frame):
-    """
-
-    :param data_frame:
-    """
-    print('test')
+    # закрываем файл
+    file.close
 
 
 df = pd.read_csv('data.csv', ';', encoding='windows-1251')
-data_val = df.loc[df['name'] == 'Имя_1']['phone']
-print(data_val)
-print(df['phone'])
 
-df1 = dataframe_from_readline_file('data', 4)
-add_data_df(df1)
+print(df.loc[df['name'] == 'Имя_1']['phone'])
+
 # df.to_csv('data.csv')
