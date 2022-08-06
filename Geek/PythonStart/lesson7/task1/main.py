@@ -55,12 +55,17 @@ def add_data_df(data_frame):
     print(data_frame)
 
 
-def convert_to_txt(data_frame):
+def convert_to_txt(data_frame, data_file):
     """
 
     :param data_frame:
     """
-    print('test')
+    file = open(data_file, '+a', encoding='utf-8')
+    for j in range(data_frame.shape[0]):
+        for i in range(len(data_frame.columns)):
+            print(data_frame[f'{data_frame.columns[i]}'][j])
+            file.write(data_frame[f'{data_frame.columns[i]}'][j] + '\n')
+    file.close()
 
 
 df = pd.read_csv('data.csv', ';', encoding='windows-1251')
@@ -69,5 +74,5 @@ print(data_val)
 print(df['phone'])
 
 df1 = dataframe_from_readline_file('data', 4)
-add_data_df(df1)
-# df.to_csv('data.csv')
+add_data_df(df)
+convert_to_txt(df, 'new_data')
