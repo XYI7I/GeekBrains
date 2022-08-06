@@ -74,5 +74,7 @@ print(data_val)
 print(df['phone'])
 
 df1 = dataframe_from_readline_file('data', 4)
-add_data_df(df)
+add_data_df(df1)
 convert_to_txt(df, 'new_data')
+
+df1.to_csv('new_data.csv', encoding='utf-8')
