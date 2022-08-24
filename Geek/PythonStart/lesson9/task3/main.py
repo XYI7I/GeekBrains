@@ -7,6 +7,6 @@ try:
 
     # download the highest quality video
     filters.get_highest_resolution().download()
-    print('Video Downloaded Successfully')
+    print('Downloaded Successfully')
 except Exception as e:
     print(e)
