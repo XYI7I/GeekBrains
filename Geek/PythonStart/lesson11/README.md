@@ -1,7 +1,7 @@
 # Знакомство с языком Python (семинары)
 ## Урок 11. Jupyter Notebook и несколько слов об аналитике
 
-> [Задача](https://github.com/XYI7I/GeekBrains/tree/main/Geek/PythonStart/lesson10/main.ipynb): 
+> [Задача](https://github.com/XYI7I/GeekBrains/tree/main/Geek/PythonStart/lesson11/HW_11.ipynb): 
 
 > #### Pandas
 
