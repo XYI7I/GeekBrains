@@ -1,7 +1,5 @@
 import requests
 from bs4 import BeautifulSoup as bs
-import re
-from dateutil.parser import parse
 
 
 def convert_currency_xe(src, dst='RUB', amount=1):
@@ -27,7 +25,3 @@ def convert_currency_xe(src, dst='RUB', amount=1):
         rate_val += el
 
     return rate_val
-
-    # get the last updated datetime
-
-# convert_currency_xe('USD', 'RUB', 1000)
