@@ -1,9 +1,9 @@
-import logging, web_currency
+import logging
+import web_currency
+
 from aiogram import Bot, Dispatcher, executor, types
 
-from aiogram.types import InputTextMessageContent, InlineQuery
-
-API_TOKEN = 'BOT_TOKEN_HERE'
+API_TOKEN = '5521855231:AAFZVUm0JvtwF3aLjPzXytBfhV2p0vIengQ'
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
