@@ -1,6 +1,6 @@
 # Java: знакомство и как пользоваться базовым API (семинары)
 ## Урок 2. Почему вы не можете не использовать API
-> [Задача 1](https://github.com/XYI7I/GeekBrains/tree/main/Geek/JavaStart/lesson2/task1/Main.java): Написать программу вычисления n-ого треугольного числа. [url](http://ru.wikipedia.org/wiki/Треугольное_число)
+> [Задача 1](https://github.com/XYI7I/GeekBrains/tree/main/Geek/JavaStart/lesson2/task1/task1/Main.java): Написать программу вычисления n-ого треугольного числа. [url](http://ru.wikipedia.org/wiki/Треугольное_число)
 
 
     Пример:
