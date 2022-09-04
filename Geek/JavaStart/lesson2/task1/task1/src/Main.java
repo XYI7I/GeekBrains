@@ -8,8 +8,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Программа вычисления n-ого треугольного числа");
-        int var = triangular_num(input_num());
-        System.out.println(var);
+        int var1 = input_num();
+        int var = triangular_num(var1);
+        System.out.printf("%s-e треугольное число = %s", var1, var);
 
     }
     static int input_num(){
