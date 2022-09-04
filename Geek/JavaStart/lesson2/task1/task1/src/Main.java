@@ -14,15 +14,15 @@ public class Main {
     }
     static int input_num(){
         Scanner iScaner = new Scanner(System.in);
-        System.out.print("Введите целое положительное: ");
-        boolean flag = iScaner.hasNextInt();
-        System.out.println(flag);
-        int var = iScaner.nextInt();
-        System.out.printf("n = %s \n", var);
 
-        iScaner.close();
-        return var;
-    }
+//        boolean flag = iScaner.hasNextInt();
+//        System.out.println(flag);
+        do{
+            System.out.print("Введите целое положительное: ");
+            return iScaner.nextInt();
+        }
+        while (!iScaner.hasNextInt());
+            }
 
     static int triangular_num(int num){
         return num * (num+1)/2;
