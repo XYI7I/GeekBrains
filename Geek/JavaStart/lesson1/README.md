@@ -1,7 +1,7 @@
 # Java: знакомство и как пользоваться базовым API (семинары)
 ## Урок 1.  Знакомство с языком программирования Java
 
-> [Задача 1](https://github.com/XYI7I/GeekBrains/tree/main/Geek/JavaStart/lesson1/task1/src/Main.java): Реализовать функцию возведения числа а в степень b. a, b ∈ Z. Сводя количество выполняемых действий к минимуму.
+> [Задача 1](https://github.com/XYI7I/GeekBrains/tree/main/Geek/JavaStart/lesson1/task1/task1/src/Main.java): Реализовать функцию возведения числа а в степень b. a, b ∈ Z. Сводя количество выполняемых действий к минимуму.
 
         Пример 1: а = 3, b = 2, ответ: 9
         Пример 2: а = 2, b = -2, ответ: 0.25
@@ -15,7 +15,7 @@
         1000
 
 
-> [Задача 2](https://github.com/XYI7I/GeekBrains/tree/main/Geek/JavaStart/lesson1/task2/src/Main.java): На вход некоторому исполнителю подаётся два числа (a, b). У исполнителя есть две команды
+> [Задача 2](https://github.com/XYI7I/GeekBrains/tree/main/Geek/JavaStart/lesson1/task2/task2/src/Main.java): На вход некоторому исполнителю подаётся два числа (a, b). У исполнителя есть две команды
 
         команда 1 (к1): увеличить в с раза, а умножается на c
         команда 2 (к2): увеличить на d, к a прибавляется d
