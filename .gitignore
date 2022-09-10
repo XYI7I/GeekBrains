@@ -10,4 +10,6 @@
 **/obj/
 *.csproj
 *.iml
+*.txt
+*.csv
 **/out/
