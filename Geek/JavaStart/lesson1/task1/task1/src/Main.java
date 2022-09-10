@@ -13,7 +13,7 @@ public class Main {
         file_wr(String.valueOf(numa), "input.txt", "a");
         int numb = input_num();
         file_wr(String.valueOf(numb), "input.txt", "b");
-        file_wr(String.valueOf(pow_num(numa, numb)), "output.txt", "a^b = ");
+        file_wr(String.valueOf(pow_num(numa, numb)), "output.txt", "a^b =");
         System.out.printf("%s^%s = %s", numa, numb, pow_num(numa, numb));
     }
 
