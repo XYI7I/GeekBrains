@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.io.FileWriter;
+import java.io.IOException;
 
 /**
  * Реализовать функцию возведения числа а в степень b. a, b ∈ Z.
@@ -8,7 +10,10 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Программа возводит число в любую целочисленную степень.");
         int numa = input_num();
+        file_wr(String.valueOf(numa), "input.txt", "a");
         int numb = input_num();
+        file_wr(String.valueOf(numb), "input.txt", "b");
+        file_wr(String.valueOf(pow_num(numa, numb)), "output.txt", "a^b = ");
         System.out.printf("%s^%s = %s", numa, numb, pow_num(numa, numb));
     }
 
@@ -41,6 +46,16 @@ public class Main {
             var = 1 / var;
         }
         return var;
+    }
+
+    static void file_wr(String input, String filename, String var) {
+        try (FileWriter fw = new FileWriter(filename, true)) {
+            fw.write(var + " " + input);
+            fw.append('\n');
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+
     }
 
 }
