@@ -4,6 +4,7 @@
 **/venv/
 **/.venv/
 **/lection/
+**/example/
 /Add_courses/
 **/.vscode/
 **/bin/
