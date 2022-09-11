@@ -15,7 +15,6 @@ public class Main {
     }
     static int input_num(){
         Scanner iScaner = new Scanner(System.in);
-
 //        boolean flag = iScaner.hasNextInt();
 //        System.out.println(flag);
         do{
