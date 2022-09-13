@@ -1,7 +1,6 @@
 /**
  * Реализовать алгоритм пирамидальной сортировки (HeapSort)
  */
-
 public class Main {
     public void sort(int arr[])
     {
