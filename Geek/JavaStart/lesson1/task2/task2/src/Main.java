@@ -13,11 +13,28 @@ import java.util.Scanner;
  ответ: нет решения.
  *Подумать над тем, как сделать минимальное количество команд
  */
+
 public class Main {
     public static void main(String[] args) {
         System.out.println(" На вход некоторому исполнителю подаётся два числа (a, b). У исполнителя есть две команды\n" +
                 "\n" +
                 " команда 1 (к1): увеличить в с раза, а умножается на c\n" +
                 " команда 2 (к2): увеличить на d, к a прибавляется d");
+        System.out.print("Введите число a: ");
+        int numa = input_num();
+        System.out.print("Введите число b: ");
+        int numb = input_num();
+    }
+
+    static int input_num(){
+        Scanner iScaner = new Scanner(System.in);
+
+//        boolean flag = iScaner.hasNextInt();
+//        System.out.println(flag);
+        do{
+            return iScaner.nextInt();
+        }
+        while (!iScaner.hasNextInt());
     }
 }
+
