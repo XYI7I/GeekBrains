@@ -13,3 +13,4 @@ Education repository
 * [Введение в контроль версий - git](https://github.com/XYI7I/GeekBrains/tree/main/Geek/Git)<br>
 * [Знакомство с языком Python](https://github.com/XYI7I/GeekBrains/tree/main/Geek/PythonStart)<br>
 * [Java: знакомство и как пользоваться базовым API](https://github.com/XYI7I/GeekBrains/tree/main/Geek/JavaStart)
+* [Объектно-ориентированное программирование](https://github.com/XYI7I/GeekBrains/tree/main/Geek/OOP)
