@@ -1,22 +1,20 @@
 public class Main {
-  public static void main(String[] args) {
-    Person irina = new Person("Ирина");
-    Person vasya = new Person("Вася");
-    Person masha = new Person("Маша");
-    Person jane = new Person("Женя");
-    Person ivan = new Person("Ваня");
+  public static void main(String[] args) throws IOException, ClassNotFoundException {
+    PersonBuilder builder = new PersonBuilder();
+    Person john = builder.setName("John").setAge(30).setGender(Gender.MALE).build();
+    Person alice = builder.setName("Alice").setAge(25).setGender(Gender.FEMALE).build();
+    Person bob = builder.setName("Bob").setAge(5).setGender(Gender.MALE).build();
+    Person eve = builder.setName("Eve").setAge(3).setGender(Gender.FEMALE).build();
 
-    GeoTree gt = new GeoTree();
-    gt.append(irina, vasya);
-    gt.append(irina, masha);
-    gt.append(vasya, jane);
-    gt.append(vasya, ivan);
+    GenealogyStorage storage = new GenealogyStorage();
+    Genealogy genealogy = storage.load("genealogy.txt");
 
-    System.out.println(new Research(gt).spend(irina, Relationship.parent));
+    GenealogyResearch research = new GenealogyResearch(genealogy);
+    List<Person> children = research.getChildren(john);
+
+    ConsoleOutput consoleOutput = new ConsoleOutput();
+    for (Person child : children) {
+      consoleOutput.print(child.getName());
+    }
   }
-}
-
-enum Relationship {
-  parent,
-  children
 }
