@@ -1,8 +1,8 @@
-package ru.gb;
+//package ru.gb;
 
 import java.util.ArrayList;
 
-public class App {
+public class Main {
   public static void main(String[] args) {
     Person irina = new Person("Ирина");
     Person vasya = new Person("Вася");
