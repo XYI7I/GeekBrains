@@ -1,5 +1,6 @@
 public class Person {
     private String name;
+    private String fullname;
     private int age;
     private Gender gender;
 
@@ -19,6 +20,10 @@ public class Person {
 
     public Gender getGender() {
         return gender;
+    }
+
+    public String getFullName() {
+        return fullname;
     }
 }
 
