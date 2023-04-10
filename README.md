@@ -7,6 +7,8 @@ Education repository
 * [Основы языка Python](https://github.com/XYI7I/GeekBrains/tree/main/AI/Python)<br>
 * [Библиотеки Python для Data Science: продолжение](https://github.com/XYI7I/GeekBrains/tree/main/AI/PythonDS_2)
 * [Фреймворк PyTorch для разработки искусственных нейронных сетей](https://github.com/XYI7I/GeekBrains/tree/main/AI/PyTorch)
+* [Введение в обработку естественного языка](https://github.com/XYI7I/GeekBrains/tree/main/AI/Introduction_NLP)
+
 
 ### Geek - Факультет Разработчик
 
