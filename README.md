@@ -17,4 +17,4 @@ Education repository
 * [Знакомство с языком Python](https://github.com/XYI7I/GeekBrains/tree/main/Geek/PythonStart)<br>
 * [Java: знакомство и как пользоваться базовым API](https://github.com/XYI7I/GeekBrains/tree/main/Geek/JavaStart)<br>
 * [Объектно-ориентированное программирование](https://github.com/XYI7I/GeekBrains/tree/main/Geek/OOP)<br>
-* [Погружение в Python (семинары)](https://github.com/XYI7I/GeekBrains/tree/main/Geek/PythonStart)
+* [Погружение в Python (семинары)](https://github.com/XYI7I/GeekBrains/tree/main/Geek/Python)
