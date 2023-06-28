@@ -1,24 +1,40 @@
 """
-Напишите программу для. проверки истинности утверждения ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.
+Треугольник существует только тогда, когда сумма любых двух его сторон больше третьей.
+Дано a, b, c - стороны предполагаемого треугольника.
+Требуется сравнить длину каждого отрезка-стороны с суммой двух других.
+Если хотя бы в одном случае отрезок окажется больше суммы двух других, то треугольника с такими сторонами не существует.
+Отдельно сообщить является ли треугольник разносторонним, равнобедренным или равносторонним.
 """
-def inputNumbers():
-    xyz = ["X", "Y", "Z"]
-    a = []
-    for i in range(3):
-        a.append(input(f"Введите значение {xyz[i]}: "))
-    return a
 
 
-def checkPredicate(arr):
-    left = not (arr[0] or arr[1] or arr[2])
-    right = not arr[0] and not arr[1] and not arr[2]
-    result = left == right
-    return result
+def check_triangle(a, b, c):
+    if a >= b + c or b >= a + c or c >= a + b:
+        return False
+    else:
+        return True
 
 
-statement = inputNumbers()
+def classify_triangle(a, b, c):
+    if a == b == c:
+        return "равносторонний"
+    elif a == b or b == c or a == c:
+        return "равнобедренный"
+    else:
+        return "разносторонний"
 
-if checkPredicate(statement) == True:
-    print(f"Утверждение истинно")
-else:
-    print(f"Утверждение ложно")
+
+def main():
+    a = float(input("Введите длину стороны a: "))
+    b = float(input("Введите длину стороны b: "))
+    c = float(input("Введите длину стороны c: "))
+
+    if check_triangle(a, b, c):
+        print("Треугольник с такими сторонами существует.")
+        triangle_type = classify_triangle(a, b, c)
+        print("Треугольник является", triangle_type)
+    else:
+        print("Треугольник с такими сторонами не существует.")
+
+
+if __name__ == "__main__":
+    main()
