@@ -15,5 +15,6 @@ Education repository
 * [Знакомство с языками программирования - C#](https://github.com/XYI7I/GeekBrains/tree/main/Geek/C%23)<br>
 * [Введение в контроль версий - git](https://github.com/XYI7I/GeekBrains/tree/main/Geek/Git)<br>
 * [Знакомство с языком Python](https://github.com/XYI7I/GeekBrains/tree/main/Geek/PythonStart)<br>
-* [Java: знакомство и как пользоваться базовым API](https://github.com/XYI7I/GeekBrains/tree/main/Geek/JavaStart)
-* [Объектно-ориентированное программирование](https://github.com/XYI7I/GeekBrains/tree/main/Geek/OOP)
+* [Java: знакомство и как пользоваться базовым API](https://github.com/XYI7I/GeekBrains/tree/main/Geek/JavaStart)<br>
+* [Объектно-ориентированное программирование](https://github.com/XYI7I/GeekBrains/tree/main/Geek/OOP)<br>
+* [Погружение в Python (семинары)](https://github.com/XYI7I/GeekBrains/tree/main/Geek/PythonStart)
