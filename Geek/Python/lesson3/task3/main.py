@@ -1,35 +1,40 @@
 """
-Напишите программу, которая принимает две строки вида “a/b” - дробь с числителем и знаменателем.
-Программа должна возвращать сумму и произведение* дробей.
-Для проверки своего кода используйте модуль fractions.
+В большой текстовой строке подсчитать количество встречаемых слов и вернуть 10 самых частых.
+Не учитывать знаки препинания и регистр символов.
+За основу возьмите любую статью из википедии или из документации к языку.
 """
 
-from fractions import Fraction
+import re
+from collections import Counter
 
 
-def calculate_fraction_operations(fraction1, fraction2):
-    # Разделяем строки дробей на числитель и знаменатель
-    numerator1, denominator1 = map(int, fraction1.split('/'))
-    numerator2, denominator2 = map(int, fraction2.split('/'))
+def count_most_frequent_words(text, n=10):
+    # Приводим текст к нижнему регистру
+    text = text.lower()
 
-    # Создаем объекты Fraction для каждой дроби
-    fraction_obj1 = Fraction(numerator1, denominator1)
-    fraction_obj2 = Fraction(numerator2, denominator2)
+    # Извлекаем слова из текста, игнорируя знаки препинания
+    words = re.findall(r'\w+', text)
 
-    # Выполняем операции с дробями
-    sum_fraction = fraction_obj1 + fraction_obj2
-    product_fraction = fraction_obj1 * fraction_obj2
+    # Подсчитываем количество встречаемых слов
+    word_counts = Counter(words)
 
-    return sum_fraction, product_fraction
+    # Возвращаем список наиболее часто встречающихся слов
+    most_common_words = word_counts.most_common(n)
+
+    return most_common_words
 
 
-# Получаем две строки с дробями от пользователя
-fraction1 = input("Введите первую дробь (в формате a/b): ")
-fraction2 = input("Введите вторую дробь (в формате a/b): ")
+# Пример использования
+text = """
+Yuri Alekseyevich Gagarin[a] (9 March 1934 – 27 March 1968) was a Soviet pilot and cosmonaut who, aboard the first successful crewed spaceflight, became the first human to journey into outer space. Travelling on Vostok 1, Gagarin completed one orbit of Earth on 12 April 1961. By achieving this major milestone for the Soviet Union amidst the Space Race, he became an international celebrity and was awarded many medals and titles, including the nation's highest distinction: Hero of the Soviet Union.
 
-# Выполняем вычисления
-sum_result, product_result = calculate_fraction_operations(fraction1, fraction2)
+Hailing from the village of Klushino in the Russian SFSR, Gagarin was a foundryman at a steel plant in Lyubertsy in his youth. He later joined the Soviet Air Forces as a pilot and was stationed at the Luostari Air Base, near the Norway–Soviet Union border, before his selection for the Soviet space programme alongside five other cosmonauts. Following his spaceflight, Gagarin became the deputy training director of the Cosmonaut Training Centre, which was later named after him. He was also elected as a deputy of the Soviet of the Union in 1962 and then to the Soviet of Nationalities, respectively the lower and upper chambers of the Supreme Soviet.
 
-# Выводим результаты
-print("Сумма дробей:", sum_result)
-print("Произведение дробей:", product_result)
+Vostok 1 was Gagarin's only spaceflight, but he served as the backup crew to Soyuz 1, which ended in a fatal crash, killing his friend and fellow cosmonaut Vladimir Komarov. Fearful that a high-level national hero might be killed, Soviet officials banned Gagarin from participating in further spaceflights. After completing training at the Zhukovsky Air Force Engineering Academy in February 1968, he was again allowed to fly regular aircraft. However, Gagarin died five weeks later, when the MiG-15 that he was piloting with flight instructor Vladimir Seryogin crashed near the town of Kirzhach.
+"""
+
+most_frequent_words = count_most_frequent_words(text, n=10)
+
+print("Самые часто встречающиеся слова:")
+for word, count in most_frequent_words:
+    print(f"{word}: {count}")
