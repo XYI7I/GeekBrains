@@ -1,22 +1,17 @@
 """
-Дан список повторяющихся элементов. Вернуть список с дублирующимися элементами.
-В результирующем списке не должно быть дубликатов.
+Напишите функцию принимающую на вход только ключевые параметры и возвращающую словарь, где ключ — значение переданного аргумента, а значение — имя аргумента.
+Если ключ не хешируем, используйте его строковое представление.
 """
 
 
-def remove_duplicates(lst):
-    # Создаем множество из списка, чтобы удалить дубликаты
-    unique_set = set(lst)
+from collections.abc import Hashable
 
-    # Преобразуем множество обратно в список
-    unique_list = list(unique_set)
+def create_argument_dict(**kwargs):
+    argument_dict = {}
+    for key, value in kwargs.items():
+        key_hashable = str(key) if not isinstance(key, Hashable) else key
+        argument_dict[value] = key_hashable
+    return argument_dict
 
-    return unique_list
-
-
-# Пример использования
-input_list = [1, 2, 2, 3, 4, 4, 5]
-result_list = remove_duplicates(input_list)
-
-print("Исходный список:", input_list)
-print("Результирующий список без дубликатов:", result_list)
+result = create_argument_dict(a=1, b=2, c=3)
+print(result)
