@@ -1,17 +1,14 @@
 """
-Напишите функцию принимающую на вход только ключевые параметры и возвращающую словарь, где ключ — значение переданного аргумента, а значение — имя аргумента.
-Если ключ не хешируем, используйте его строковое представление.
+Напишите однострочный генератор словаря, который принимает на вход три списка одинаковой длины:
+имена str, ставка int, премия str с указанием процентов вида «10.25%».
+В результате получаем словарь с именем в качестве ключа и суммой премии в качестве значения.
+Сумма рассчитывается как ставка умноженная на процент премии.
 """
 
 
-from collections.abc import Hashable
+names = ['John', 'Alice', 'Bob']
+rates = [1000, 2000, 1500]
+bonuses = ['10.25%', '5%', '12.5%']
 
-def create_argument_dict(**kwargs):
-    argument_dict = {}
-    for key, value in kwargs.items():
-        key_hashable = str(key) if not isinstance(key, Hashable) else key
-        argument_dict[value] = key_hashable
-    return argument_dict
-
-result = create_argument_dict(a=1, b=2, c=3)
+result = {name: rate * float(bonus.strip('%')) / 100 for name, rate, bonus in zip(names, rates, bonuses)}
 print(result)
