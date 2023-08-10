@@ -10,4 +10,4 @@
 
 команда для bash: python fibonacci.py 10
 
-> [Задача 3](https://github.com/XYI7I/GeekBrains/tree/main/Geek/Python/lesson15/fibonacci/fibonacci.py): Создайте функцию генератор чисел Фибоначчи [(см. Википедию)](https://ru.wikipedia.org/wiki/Числа_Фибоначчи).
+> [Задача](https://github.com/XYI7I/GeekBrains/tree/main/Geek/Python/lesson15/fibonacci/fibonacci.py): Создайте функцию генератор чисел Фибоначчи [(см. Википедию)](https://ru.wikipedia.org/wiki/Числа_Фибоначчи).
