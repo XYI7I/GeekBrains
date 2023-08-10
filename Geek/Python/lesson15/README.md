@@ -8,4 +8,6 @@
 информации. Также реализуйте возможность запуска из
 командной строки с передачей параметров.
 
-> [Задача 3](https://github.com/XYI7I/GeekBrains/tree/main/Geek/Python/lesson15/task1/main.py): Создайте функцию генератор чисел Фибоначчи [(см. Википедию)](https://ru.wikipedia.org/wiki/Числа_Фибоначчи).
+команда для bash: python fibonacci.py 10
+
+> [Задача 3](https://github.com/XYI7I/GeekBrains/tree/main/Geek/Python/lesson15/fibonacci/main.py): Создайте функцию генератор чисел Фибоначчи [(см. Википедию)](https://ru.wikipedia.org/wiki/Числа_Фибоначчи).
