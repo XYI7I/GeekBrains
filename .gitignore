@@ -16,7 +16,7 @@
 **/out/
 **/ws/
 **/ex/
-Django/**/.pdf
+/Django/**/*.pdf
 
 ### IntelliJ IDEA ###
 out/
