@@ -17,6 +17,7 @@
 **/ws/
 **/ex/
 **/Django/**/*.pdf
+**/logs/
 
 ### IntelliJ IDEA ###
 out/
