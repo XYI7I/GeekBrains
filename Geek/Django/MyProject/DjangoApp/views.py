@@ -4,35 +4,32 @@ from django.shortcuts import render
 import logging
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Client, Product, Order
-from .forms import ClientForm, ProductForm, OrderForm
-
-
-def client_list(request):
-    clients = Client.objects.all()
-    return render(request, 'client_list.html', {'clients': clients})
-
+from .models import User, Product, Order
+from .forms import UserForm, ProductForm, OrderForm
 
 logger = logging.getLogger(__name__)
 
 
-def client_detail(request, pk):
-    client = get_object_or_404(Client, pk=pk)
-    return render(request, 'client_detail.html', {'client': client})
+def user_list(request):
+    users = User.objects.all()
+    return render(request, 'user_list.html', {'users': users})
 
 
-def client_create(request):
+def user_detail(request, pk):
+    user = get_object_or_404(User, pk=pk)
+    return render(request, 'user_detail.html', {'user': user})
+
+
+def user_create(request):
     if request.method == 'POST':
-        form = ClientForm(request.POST)
+        form = UserForm(request.POST)
         if form.is_valid():
-            client = form.save()
-            return redirect('client_detail', pk=client.pk)
+            user = form.save()
+            return redirect('user_detail', pk=user.pk)
     else:
-        form = ClientForm()
-    return render(request, 'client_form.html', {'form': form})
+        form = UserForm()
+    return render(request, 'user_form.html', {'form': form})
 
-
-# Аналогичные функции для товаров:
 
 def prouct_list(request):
     products = Product.objects.all()
@@ -55,8 +52,6 @@ def product_create(request):
     return render(request, 'product_form.html', {'form': form})
 
 
-# Аналогичные функции для заказов:
-
 def order_list(request):
     orders = Order.objects.all()
     return render(request, 'order_list.html', {'orders': orders})
@@ -77,16 +72,19 @@ def product_create(request):
         form = OrderForm()
     return render(request, 'order_form.html', {'form': form})
 
-# def index(request):
-#     logger.info('Index page accessed')
-#     return HttpResponse("Hello, world!")
-# def about(request):
-#     try:
-#         # some code that might raise an exception
-#         result = 1 / 0
-#     except Exception as e:
-#         logger.exception(f'Error in about page: {e}')
-#         return HttpResponse("Oops, something went wrong.")
-#     else:
-#         logger.debug('About page accessed')
-#         return HttpResponse("This is the about page.")
+
+def index(request):
+    logger.info('Index page accessed')
+    return HttpResponse("Hello, world!")
+
+
+def about(request):
+    try:
+        # some code that might raise an exception
+        result = 1 / 0
+    except Exception as e:
+        logger.exception(f'Error in about page: {e}')
+        return HttpResponse("Oops, something went wrong.")
+    else:
+        logger.debug('About page accessed')
+        return HttpResponse("This is the about page.")
