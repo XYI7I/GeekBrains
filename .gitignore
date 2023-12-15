@@ -18,6 +18,7 @@
 **/ex/
 **/Django/**/*.pdf
 **/logs/
+\!requirements!.txt
 
 ### IntelliJ IDEA ###
 out/
